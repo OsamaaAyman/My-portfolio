@@ -202,6 +202,7 @@ nav .icon span{
     font-weight: 600;
 }
 .intro .me .hello{
+    margin-top: 0;
     margin-bottom: 5px;
 }
 .intro .me .myname{
@@ -218,13 +219,12 @@ nav .icon span{
     justify-content: center;
     column-gap: 25px;
 }
-.intro .social i{
-    color: black;
-    font-size: 30px;
-    transition-duration: .3s;
+.intro .social img{
+    width: 30px;
+    transition: 0.3s;
 }
-.intro .social i:hover{
-    opacity: .7;
+.intro .social img:hover{
+    opacity: .6;
 }
 @media (max-width: 991px){
     .intro .content{
