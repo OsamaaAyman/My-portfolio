@@ -362,13 +362,16 @@ nav .icon span{
     }
 }
 @media (max-width: 991px) {
-.about .profile {
-    width:300px;
-}
+    .about{
+        margin-top: 100px;
+    }
+    .about .profile {
+        width:300px;
+    }
 }
 @media (max-width: 767px) {
-.about .profile {
-    width:270px;
-}
+    .about .profile {
+        width:270px;
+    }
 }
 /* End About Me section */
