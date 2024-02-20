@@ -310,7 +310,7 @@ nav .icon span:nth-child(2){
 }
 .about .profile{
     overflow: hidden;
-    width: 2000px;
+    width: 200%;
     border-radius: 30px;
     text-align: center;
 }
@@ -364,7 +364,7 @@ nav .icon span:nth-child(2){
         grid-template-columns: repeat(2,minmax(320px,1fr));
     }
 }
-@media (max-width: 1199px) {
+@media (max-width: 1200px) {
     .about .content{
         flex-wrap: wrap;
         justify-content: center;
@@ -382,6 +382,9 @@ nav .icon span:nth-child(2){
 @media (max-width: 767px) {
     .about .profile {
         width:270px;
+    }
+    .about .col h3{
+        font-size: 16px;
     }
 }
 /* End About Me section */
@@ -408,7 +411,7 @@ nav .icon span:nth-child(2){
 .projects .proj{
     margin: 0;
     text-align: center;
-    padding: 20px 20px 40px;
+    padding: 20px 10px 40px;
     border-radius: 15px;
     background-color: black;
     color: white;
@@ -448,6 +451,15 @@ nav .icon span:nth-child(2){
     .projects .content{
         grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
         column-gap: 20px;
+    }
+    .projects .links button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-height: 50px;
+    }
+    .projects .links a{
+        text-decoration: none;
     }
 }
 /* End Projects section */
