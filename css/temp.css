@@ -300,8 +300,6 @@ nav .icon span:nth-child(2){
 /* Start About Me section */
 .about{
     padding: 60px;
-    display: flex;
-    align-items: center;
 }
 .about .content{
     display: flex;
@@ -310,7 +308,7 @@ nav .icon span:nth-child(2){
 }
 .about .profile{
     overflow: hidden;
-    width: 200%;
+    width: 2000px;
     border-radius: 30px;
     text-align: center;
 }
@@ -392,6 +390,7 @@ nav .icon span:nth-child(2){
 /* Start Skills section */
 .skills{
     padding: 60px;
+    text-align: center;
 }
 .skills .content{
     display: grid;
@@ -408,7 +407,9 @@ nav .icon span:nth-child(2){
     border: 2px solid var(--main-color);
     border-radius: 15px;
     text-align: center;
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-self: normal;
 }
 .skills .type .title{
     font-size: 30px;
@@ -420,9 +421,6 @@ nav .icon span:nth-child(2){
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    /* justify-content: space-around; */
-    /* align-content: space-around; */
-    /* text-align: center; */
 }
 .skills .sk{
     display: flex;
@@ -448,6 +446,10 @@ nav .icon span:nth-child(2){
     width: 40px;
 }
 @media (max-width : 991px){
+    .skills .content{
+        grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+        column-gap: 15px;
+    }
     .skills .title h3{
         font-size: 25px;
     }
@@ -611,6 +613,9 @@ nav .icon span:nth-child(2){
 }
 /* End Contact section */
 /* Start Footer section */
+.footer{
+    padding: 60px;
+}
 .footer .links{
     position: relative;
 }
@@ -618,6 +623,7 @@ nav .icon span:nth-child(2){
     list-style: none;
     display: flex;
     justify-content: space-evenly;
+    padding: 0;
     column-gap: 25px;
 }
 .footer li a{
@@ -627,6 +633,7 @@ nav .icon span:nth-child(2){
     text-decoration: none;
     font-size: 15px;
     font-weight: 400;
+    
 }
 .footer li a:hover{
     color:#555555;
