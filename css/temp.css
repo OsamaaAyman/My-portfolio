@@ -299,7 +299,7 @@ nav .icon span:nth-child(2){
 /* end intro section */
 /* Start About Me section */
 .about{
-    padding: 50px;
+    padding: 60px;
     display: flex;
     align-items: center;
 }
@@ -373,6 +373,7 @@ nav .icon span:nth-child(2){
     .about .profile {
         width:350px;
     }
+    
 }
 @media (max-width: 991px) {
     .about .profile {
@@ -388,6 +389,92 @@ nav .icon span:nth-child(2){
     }
 }
 /* End About Me section */
+/* Start Skills section */
+.skills{
+    padding: 60px;
+}
+.skills .content{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(200px,1fr));
+    column-gap: 50px;
+    row-gap: 20px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.skills .type{
+    padding: 20px;
+    border: 2px solid var(--main-color);
+    border-radius: 15px;
+    text-align: center;
+    flex: 1;
+}
+.skills .type .title{
+    font-size: 30px;
+    color : #555555;
+    font-weight: 600;
+    width: 100%;
+}
+.skills .info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    /* justify-content: space-around; */
+    /* align-content: space-around; */
+    /* text-align: center; */
+}
+.skills .sk{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin: 0 30px;
+}
+.skills .sk .text{
+    text-align: initial;
+}
+.skills .sk .text p{
+    font-size: 19px;
+    font-weight: bold;
+    margin: 3px;
+    
+}
+.skills .sk .text .level p{
+    font-size: 15px;
+    font-weight: 400;
+    
+}
+.skills .sk img{
+    width: 40px;
+}
+@media (max-width : 991px){
+    .skills .title h3{
+        font-size: 25px;
+    }
+    .skills .sk .text .main {
+        font-size: 17px;
+    }
+}
+@media (max-width : 767px){
+    .skills .content{
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    }
+    .skills .sk{
+        margin: 0 20px;
+    }
+    .skills .sk .text .main {
+        font-size: 16px;
+    }
+}
+@media (max-width : 380px){
+    .skills .sk .text .main {
+        font-size: 14px;
+    }
+    .skills .title h3{
+        font-size: 25px;
+    }
+}
+/* End Skills section */
 /* Start Projects section */
 .projects{
     padding: 60px;
@@ -397,7 +484,6 @@ nav .icon span:nth-child(2){
     grid-template-columns: repeat(2,minmax(250px,1fr));
     column-gap: 50px;
     row-gap: 20px;
-    width: 100%;
     text-align: center;
     justify-content: center;
     align-items: center;
