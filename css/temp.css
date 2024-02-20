@@ -400,6 +400,11 @@ nav .icon span{
     width: 100%;
     text-align: center;
 }
+.projects .bord{
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 5px;
+}
 .projects .proj{
     text-align: center;
     padding: 20px 20px 40px;
@@ -407,12 +412,13 @@ nav .icon span{
     background-color: black;
     color: white;
 }
-.projects .content .projimg {
-    overflow: hidden;
-}
 .projects .content .projimg img{
     max-width: 100%;
     border-radius: 10px;
+    transition: .5s;
+}
+.projects .proj:hover img{
+    transform: translateY(-10px);
 }
 .projects .proj p{
     font-size: 30px;
