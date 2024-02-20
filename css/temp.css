@@ -182,9 +182,6 @@ nav .icon span{
 .intro{
     padding: 30px;
     height: calc(100vh - 150px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .intro .content{
     display:  flex;
@@ -326,7 +323,7 @@ nav .icon span{
 }
 .about .cols{
     display: grid;
-    grid-template-columns: repeat(2,minmax(150px,1fr));
+    grid-template-columns: repeat(2,minmax(100px,1fr));
     column-gap: 20px;
 }
 .about .cols .col{
@@ -351,6 +348,8 @@ nav .icon span{
 }
 .about .descript{
     color: #777;
+    text-align: center;
+    font-size: 14px;
 }
 @media (min-width: 1200px) {
     .about .cols{
