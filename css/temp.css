@@ -412,17 +412,23 @@ nav .icon span:nth-child(2){
     flex-direction: column;
     align-self: normal;
 }
-.skills .type .title{
-    font-size: 30px;
+.skills .title{
+    min-height: 20%;
+}
+.skills .type .title h3{
+    font-size: 27px;
     color : #555555;
-    font-weight: 600;
-    width: 100%;
+    font-weight: 800;
+    transition: .3s;
 }
 .skills .info{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     overflow: hidden;
+}
+.skills .type:hover .title h3{
+    color: #0F0F0F;
 }
 .skills .sk{
     display: flex;
@@ -446,6 +452,10 @@ nav .icon span:nth-child(2){
 }
 .skills .sk img{
     width: 40px;
+    transition: .3s;
+}
+.skills .sk:hover img{
+    opacity: .6;
 }
 @media (max-width : 991px){
     .skills .content{
@@ -461,7 +471,7 @@ nav .icon span:nth-child(2){
 }
 @media (max-width : 767px){
     .skills .content{
-        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+        grid-template-columns: repeat(2,minmax(200px,1fr));
     }
     .skills .sk{
         margin: 0 20px;
@@ -470,7 +480,10 @@ nav .icon span:nth-child(2){
         font-size: 16px;
     }
 }
-@media (max-width : 380px){
+@media (max-width : 480px){
+    .skills .content{
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    }
     .skills .sk .text .main {
         font-size: 14px;
     }
