@@ -487,9 +487,6 @@ nav .icon span:nth-child(2){
     .skills .content{
         grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
     }
-    .skills .sk .text .main {
-        font-size: 14px;
-    }
     .skills .title h3{
         font-size: 25px;
     }
