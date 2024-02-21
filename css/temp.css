@@ -637,7 +637,7 @@ nav .icon span:nth-child(2){
 /* End Contact section */
 /* Start Footer section */
 .footer{
-    padding: 60px;
+    padding: 60px 0 30px ;
 }
 .footer .links{
     position: relative;
@@ -677,9 +677,10 @@ nav .icon span:nth-child(2){
 }
 .footer p{
     text-align: center;
-    padding: 25px 0 5px 0;
+    padding-top: 30px;
     font-weight: 400;
     font-size: 13px;
+    margin-bottom: 0;
 }
 @media (max-width : 767px){
     .footer p{
