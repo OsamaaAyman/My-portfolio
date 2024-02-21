@@ -188,7 +188,7 @@ nav .icon span:nth-child(2){
 /* End Header Section */
 /* Start intro section */
 .intro{
-    padding: 60px;
+    padding: 60px 20px;
     height: calc(100vh - 150px);
 }
 .intro .content{
@@ -299,7 +299,7 @@ nav .icon span:nth-child(2){
 /* end intro section */
 /* Start About Me section */
 .about{
-    padding: 60px;
+    padding: 60px 20px;
 }
 .about .content{
     display: flex;
@@ -356,6 +356,7 @@ nav .icon span:nth-child(2){
     color: #777;
     text-align: center;
     font-size: 14px;
+    line-height: 1.5;
 }
 @media (min-width: 1200px) {
     .about .cols{
@@ -375,21 +376,21 @@ nav .icon span:nth-child(2){
 }
 @media (max-width: 991px) {
     .about .profile {
-        width:300px;
+        width:320px;
     }
 }
 @media (max-width: 767px) {
     .about .profile {
-        width:270px;
+        width:320px;
     }
     .about .col h3{
         font-size: 16px;
     }
 }
 /* End About Me section */
-/* Start Skills section */
+/* Start skills section */
 .skills{
-    padding: 60px;
+    padding: 60px 20px;
     text-align: center;
 }
 .skills .content{
@@ -421,6 +422,7 @@ nav .icon span:nth-child(2){
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    overflow: hidden;
 }
 .skills .sk{
     display: flex;
@@ -476,10 +478,10 @@ nav .icon span:nth-child(2){
         font-size: 25px;
     }
 }
-/* End Skills section */
+/* End skills section */
 /* Start Projects section */
 .projects{
-    padding: 60px;
+    padding: 60px 20px;
 }
 .projects .content{
     display: grid;
@@ -495,6 +497,7 @@ nav .icon span:nth-child(2){
     border-radius: 15px;
     padding: 5px;
     margin: 0;
+    align-self: normal;
 }
 .projects .proj{
     margin: 0;
@@ -503,6 +506,8 @@ nav .icon span:nth-child(2){
     border-radius: 15px;
     background-color: black;
     color: white;
+    height: 100%;
+    margin: auto;
 }
 .projects .content .projimg img{
     max-width: 100%;
@@ -537,8 +542,8 @@ nav .icon span:nth-child(2){
 }
 @media (max-width : 767px) {
     .projects .content{
-        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
-        column-gap: 20px;
+        grid-template-columns: repeat(2,minmax(200px,1fr));
+        column-gap: 15px;
     }
     .projects .links button{
         display: flex;
@@ -550,10 +555,15 @@ nav .icon span:nth-child(2){
         text-decoration: none;
     }
 }
+@media (max-width : 480px) {
+    .projects .content{
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    }
+}
 /* End Projects section */
 /* Start Contact section */
 .contact{
-    padding: 60px;
+    padding: 60px 20px 0px;
 }
 .contact .content{
     text-align: center;
@@ -660,7 +670,7 @@ nav .icon span:nth-child(2){
 }
 @media (max-width : 767px){
     .footer p{
-        font-size: 10px;
+        font-size: 9px;
     }
 }
 /* End Footer section*/
