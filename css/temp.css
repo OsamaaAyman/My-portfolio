@@ -450,8 +450,11 @@ nav .icon span:nth-child(2){
     font-weight: 400;
     
 }
+.skills .sk .icon{
+    height: 100%;
+}
 .skills .sk img{
-    width: 40px;
+    width: 30px;
     transition: .3s;
 }
 .skills .sk:hover img{
