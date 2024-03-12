@@ -532,11 +532,15 @@ nav .icon span:nth-child(2){
 .projects .content{
     display: grid;
     grid-template-columns: repeat(2,minmax(250px,1fr));
+    /* grid-template-rows: auto; */
     column-gap: 50px;
     row-gap: 20px;
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+.el3{
+    grid-column: span 2;
 }
 .projects .bord{
     border: 2px solid black;
@@ -544,6 +548,7 @@ nav .icon span:nth-child(2){
     padding: 5px;
     margin: 0;
     align-self: normal;
+    z-index: 1;
 }
 .projects .proj{
     margin: 0;
@@ -604,6 +609,9 @@ nav .icon span:nth-child(2){
 @media (max-width : 480px) {
     .projects .content{
         grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    }
+    .el3{
+        grid-column: span 1;
     }
 }
 /* End Projects section */
