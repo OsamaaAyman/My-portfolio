@@ -22,3 +22,10 @@ hamburger.addEventListener("click", function () {
 
   navli.forEach(li => li.addEventListener('click', removeNav));
 });
+
+var typed = new Typed(".job",{
+  strings: ["Front-End Developer","Competitive Programmer","AI Model Tranier"],
+  typeSpeed:60,
+  backSpeed:60,
+  loop:true,
+})

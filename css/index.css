@@ -236,9 +236,11 @@ nav .hamburger.active span:nth-of-type(3){
         transition: .5s;
         border-radius: 0 20px 0 0;
         z-index: 3;
+        overflow: hidden;
     }
     nav .links.active{
         width: 65%;
+        overflow: hidden;
     }
     nav ul {
         position: absolute;
@@ -297,8 +299,6 @@ nav .hamburger.active span:nth-of-type(3){
 /* Start intro section */
 .intro {
     padding: 60px 20px;
-    height: 75vh;
-    
 }
 
 .intro .content {
@@ -338,12 +338,16 @@ nav .hamburger.active span:nth-of-type(3){
     min-width: 400px;
     margin: 0px;
 }
-
-.intro .me .job {
-    font-size: 30px;
+.intro .me h2 {
+    /* font-size: 35px; */
+    font-weight: 700;
     margin: 5px;
+    color: #777;
 }
-
+.intro .me h2 span{
+    color: #5E1675;
+    
+}
 @media (max-width: 991px) {
     .intro .content {
         flex-direction: column;
@@ -363,7 +367,7 @@ nav .hamburger.active span:nth-of-type(3){
     }
 
     .intro .me .job {
-        font-size: 25px;
+        font-size: 22px;
     }
 
     .intro .profile img {
@@ -431,7 +435,7 @@ nav .hamburger.active span:nth-of-type(3){
 /* end intro section */
 /* Start About Me section */
 .about {
-    padding: 60px 20px;
+    padding: 0px 20px 40px;
 }
 
 .about .content {

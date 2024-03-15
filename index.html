@@ -1,320 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/index.css">
-    <!-- Render All Elements Normally -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <!-- Font Awesome library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Make Animation When Scrolling -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!--Google fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Start Header -->
-    <div class="header">
-        <div class="container">
-            <div class="logo">
-                <span class="name">Osama</span> Ayman
-            </div>
-            <nav>
-                <span class="hamburger">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="css/index.css">
+        <!-- Render All Elements Normally -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <!-- Font Awesome library -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Make Animation When Scrolling -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <!--Google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <!-- Start Header -->
+        <div class="header">
+            <div class="container">
+                <div class="logo">
+                    <span class="name">Osama</span> Ayman
+                </div>
+                <nav>
+                    <span class="hamburger">
                         <span></span>
                         <span></span>
                         <span></span>
-                </span>
-                <div class="links">
-                    <div class="list">
-                        <ul>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#skills">Experience</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <div class="overlay"></div>
-    <!-- End Header -->
-    <!-- Start Intro Section -->
-    <div class="intro">
-        <div class="container">
-            <div class="content">
-                <div class="profile" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" data-aos-once="true">
-                    <img src="imgs/md.jpg" alt="Osama">
-                </div>
-                <div class="me">    
-                    <div class="text" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" data-aos-once="true">
-                        <p class="hello">Hello, I'm</p>
-                        <h1 class="myname">Osama Ayman</h1>
-                        <p class="job">Frontend Developer</p>
-                    </div>
-                    <div class="info" >
-                        <a href="Osama_Ayman_Resume.pdf" target="_blank" download="Osama_Ayman_Resume"><button class="bt1">Download CV</button></a>
-                        <a href="#contact"><button class="bt2">Contact info</button></a>
-                    </div>
-                    <div class="social" >
-                        <a href="https://www.linkedin.com/in/osamaaaayman" target="_blank"><img src="imgs/linkedin.png" alt=""></a>
-                        <a href="https://github.com/OsamaaAyman" target="_blank"><img src="imgs/github-logo.png" alt=""></a>
-                        <a href="https://codeforces.com/profile/Osamaaaayman" target="_blank"><img src="imgs/codeforces.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Intro Section -->
-    <!-- Start About me Section -->
-    <div class="about" id="about">
-        <div class="container">
-            <div class="special-heading">
-                <p data-aos="fade-down"  data-aos-duration="1000" data-aos-once="true">Get To Know More</p>
-                <h2>About Me</h2>
-            </div>
-            <div class="content">
-                <div class="profile" >
-                    <img src="imgs/profile2.jpg" alt="Me" >
-                </div>
-                <div class="history">
-                    <div class="cols">
-                        <div class="col">
-                            <img src="imgs/experience.png" alt="" class="icon">
-                            <h3>Experience</h3>
-                            <p class="time"> +4 Months</p>
-                            <p class="job">Ai Model Trainer</p>
-                        </div>
-                        <div class="col">
-                            <img src="imgs/education.png" alt="" class="icon">
-                            <h3>Education</h3>
-                            <p class="time">B.Cs Bachelors Degree</p>
-                            <p class="job">Benha university</p>
+                    </span>
+                    <div class="links">
+                        <div class="list">
+                            <ul>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#skills">Experience</a></li>
+                                <li><a href="#projects">Projects</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="descript">
-                        <p>During my time at Scale AI USA, I served as a Remote Coding AI Model Tester, evaluating AI performance and providing feedback for improvement. Previously, I was a Competitive Coding AI Trainer, achieving perfect accuracy in coding tasks and contributing to the development of advanced generative AI models, notably in the Dolphin Project. My roles underscore my proficiency in coding, problem-solving, and advancing AI technology, But Now I'm starting my career as a Web Developer.</p>
+                </nav>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <!-- End Header -->
+        <!-- Start Intro Section -->
+        <div class="intro">
+            <div class="container">
+                <div class="content">
+                    <div class="profile" data-aos="fade-up" data-aos-delay="0"
+                        data-aos-duration="1000" data-aos-once="true">
+                        <img src="imgs/md.jpg" alt="Osama">
+                    </div>
+                    <div class="me">
+                        <div class="text" data-aos="fade-up"
+                            data-aos-delay="150" data-aos-duration="1000"
+                            data-aos-once="true">
+                            <p class="hello">Hello, I'm</p>
+                            <h1 class="myname">Osama Ayman</h1>
+                            <h2><span class="job"></span></h2>
+                        </div>
+                        <div class="info">
+                            <a href="Osama_Ayman_Resume.pdf" target="_blank"
+                                download="Osama_Ayman_Resume"><button
+                                    class="bt1">Download CV</button></a>
+                            <a href="#contact"><button class="bt2">Contact
+                                    info</button></a>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/osamaaaayman"
+                                target="_blank"><img src="imgs/linkedin.png"
+                                    alt></a>
+                            <a href="https://github.com/OsamaaAyman"
+                                target="_blank"><img src="imgs/github-logo.png"
+                                    alt></a>
+                            <a
+                                href="https://codeforces.com/profile/Osamaaaayman"
+                                target="_blank"><img src="imgs/codeforces.png"
+                                    alt></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End About me Section -->
-    <!-- Start Skills section -->
-    <div class="skills" id="skills">
-        <img src="imgs/coding.png" alt="" class="rot rot--normal">
-        <div class="container">
-            <div class="special-heading">
-                <p data-aos="fade-down"  data-aos-duration="1000" data-aos-once="true">Explore my</p>
-                <h2>Experience</h2>
-            </div>
-            <div class="content">
-                <div class="type">
-                    <div class="title">
-                        <h3>Programming Languages</h3>
-                    </div>
-                    <div class="info">
-                        <div class="sk">
-                            <div class="icon">
-                                <img src="imgs/verify.png" alt="">
-                            </div>
-                            <div class="text">
-                                <p class="main">HTML</p>
-                                <div class="level"><p>Experienced</p></div>
-                            </div>
-                        </div>
-                        <div class="sk">
-                            <div class="icon">
-                                <img src="imgs/verify.png" alt="">
-                            </div>
-                            <div class="text">
-                                <p class="main">CSS</p>
-                                <div class="level"><p>Experienced</p></div>
-                            </div>
-                        </div>
-                        <div class="sk">
-                            <div class="icon">
-                                <img src="imgs/verify.png" alt="">
-                            </div>
-                            <div class="text">
-                                <p class="main">C++</p>
-                                <div class="level"><p>Experienced</p></div>
-                            </div>
-                        </div>
-                        <div class="sk">
-                            <div class="icon">
-                                <img src="imgs/verify.png" alt="">
-                            </div>
-                            <div class="text">
-                                <p class="main">Javascript</p>
-                                <div class="level"><p>Intermediate</p></div>
-                            </div>
-                        </div>
-                        <div class="sk">
-                            <div class="icon">
-                                <img src="imgs/verify.png" alt="">
-                            </div>
-                            <div class="text">
-                                <p class="main">Python</p>
-                                <div class="level"><p>Intermediate</p></div>
-                            </div>
-                        </div>
-                        <div class="sk">
-                            <div class="icon">
-                                <img src="imgs/verify.png" alt="">
-                            </div>
-                            <div class="text">
-                                <p class="main">Java</p>
-                                <div class="level"><p>Basic</p></div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- End Intro Section -->
+        <!-- Start About me Section -->
+        <div class="about" id="about">
+            <div class="container">
+                <div class="special-heading">
+                    <p data-aos="fade-down" data-aos-duration="1000"
+                        data-aos-once="true">Get To Know More</p>
+                    <h2>About Me</h2>
                 </div>
-                <div class="type">
-                    <div class="title">    
-                        <h3>Concepts & Soft Skills</h3>
+                <div class="content">
+                    <div class="profile">
+                        <img src="imgs/profile2.jpg" alt="Me">
                     </div>
-                    <div class="info">
-                        <div class="sk">
-                            <div class="icon">
-                                <img src="imgs/verify.png" alt="">
+                    <div class="history">
+                        <div class="cols">
+                            <div class="col">
+                                <img src="imgs/experience.png" alt class="icon">
+                                <h3>Experience</h3>
+                                <p class="time"> +4 Months</p>
+                                <p class="job">Ai Model Trainer</p>
                             </div>
-                            <div class="text">
-                                <p class="main">Problem-Solving</p>
-                            </div>
-                        </div>
-                        <div class="sk">
-                            <div class="icon">
-                                <img src="imgs/verify.png" alt="">
-                            </div>
-                            <div class="text">
-                                <p class="main">Data Structures</p>
+                            <div class="col">
+                                <img src="imgs/education.png" alt class="icon">
+                                <h3>Education</h3>
+                                <p class="time">B.Cs Bachelors Degree</p>
+                                <p class="job">Benha university</p>
                             </div>
                         </div>
-                        <div class="sk">
-                            <div class="icon">
-                                <img src="imgs/verify.png" alt="">
-                            </div>
-                            <div class="text">
-                                <p class="main">Team Work</p>
-                            </div>
+                        <div class="descript">
+                            <p>During my time at Scale AI USA, I served as a
+                                Remote Coding AI Model Tester, evaluating AI
+                                performance and providing feedback for
+                                improvement. Previously, I was a Competitive
+                                Coding AI Trainer, achieving perfect accuracy in
+                                coding tasks and contributing to the development
+                                of advanced generative AI models, notably in the
+                                Dolphin Project. My roles underscore my
+                                proficiency in coding, problem-solving, and
+                                advancing AI technology, But Now I'm starting my
+                                career as a Web Developer.</p>
                         </div>
-                        <div class="sk">
-                            <div class="icon">
-                                <img src="imgs/verify.png" alt="">
-                            </div>
-                            <div class="text">
-                                <p class="main">Documentation</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    <!-- End Skills section -->
-    <!-- Start projects section -->
-    <div class="projects" id="projects">
-        <img src="imgs/gear1.png" alt="" class="rot rot--reverse">
-        <img src="imgs/gear2.png" alt="" class="rot rot--reverse2">
-        <div class="container">
-            <div class="special-heading">
-                <p data-aos="fade-down"  data-aos-duration="1000" data-aos-once="true">Browse My Recent</p>
-                <h2>Projects</h2>
-            </div>
-            <div class="content">
-                <div class="bord el1">
-                <div class="proj">
-                    <div class="projimg">
-                        <img src="imgs/Leon2.png" alt="">
-                    </div>
-                    <p>Leon Agency</p>
-                    <div class="links" >
-                        <a href="https://github.com/OsamaaAyman/Leon-Agency" target="_blank"><button >Github</button></a>
-                        <a href="https://osamaaayman.github.io/Leon-Agency/" target="_blank"><button>Live Demo</button></a>
-                    </div>
-                </div>
-            </div>
-            <div class="bord el2">
-                <div class="proj">
-                    <div class="projimg">
-                        <img src="imgs/myprofile.png" alt="">
-                    </div>
-                    <p>My Portfolio</p>
-                    <div class="links" >
-                        <a href="https://github.com/OsamaaAyman/My-portfolio" target="_blank"><button>Github</button></a>
-                        <a href="https://osamaaayman.github.io/My-portfolio/" target="_blank"><button>Live Demo</button></a>
-                    </div>
-                </div>
-            </div>
-            <div class="bord el3" >
-                <div class="proj">
-                    <div class="projimg">
-                        <img src="imgs/image.png" alt="">
-                    </div>
-                    <p>IEEE BUB</p>
-                    <div class="links" >
-                        <a href="https://github.com/OsamaaAyman/IEEE-Website" target="_blank"><button>Github</button></a>
-                        <a href="https://osamaaayman.github.io/IEEE-Website/" target="_blank"><button>Live Demo</button></a>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-    <!-- End projects section -->
-    <!-- Start Contact section -->
-    <div class="contact" id="contact">
-        <div class="container">
-            <div class="special-heading">
-                <p data-aos="fade-down"  data-aos-duration="1000" data-aos-once="true">Get in Touch</p>
-                <h2>Contact</h2>
-            </div>
-            <div class="content">
-                <div class="links">
-                    <div class="link">
-                        <img src="imgs/email.png" alt="">
-                        <a href="mailto:osamaaaaymen@gmail.com" target="_blank">Osamaaaaymen@gmail.com</a>
-                    </div>
-                    <div class="link">
-                        <img src="imgs/linkedin.png" alt="">
-                        <a href="https://www.linkedin.com/in/osamaaaayman" target="_blank">Linkedin</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Contact section -->
-    <!-- Start Footer section -->
-    <div class="footer">
-        <div class="container">
-            <div class="content">
-                <div class="links">
-                    <div class="list">
-                        <ul>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#skills">Experience</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                        </ul>
+        <!-- End About me Section -->
+        <!-- Start Skills section -->
+        <div class="skills" id="skills">
+            <img src="imgs/coding.png" alt class="rot rot--normal">
+            <div class="container">
+                <div class="special-heading">
+                    <p data-aos="fade-down" data-aos-duration="1000"
+                        data-aos-once="true">Explore my</p>
+                    <h2>Experience</h2>
+                </div>
+                <div class="content">
+                    <div class="type">
+                        <div class="title">
+                            <h3>Programming Languages</h3>
+                        </div>
+                        <div class="info">
+                            <div class="sk">
+                                <div class="icon">
+                                    <img src="imgs/verify.png" alt>
+                                </div>
+                                <div class="text">
+                                    <p class="main">HTML</p>
+                                    <div class="level"><p>Experienced</p></div>
+                                </div>
+                            </div>
+                            <div class="sk">
+                                <div class="icon">
+                                    <img src="imgs/verify.png" alt>
+                                </div>
+                                <div class="text">
+                                    <p class="main">CSS</p>
+                                    <div class="level"><p>Experienced</p></div>
+                                </div>
+                            </div>
+                            <div class="sk">
+                                <div class="icon">
+                                    <img src="imgs/verify.png" alt>
+                                </div>
+                                <div class="text">
+                                    <p class="main">C++</p>
+                                    <div class="level"><p>Experienced</p></div>
+                                </div>
+                            </div>
+                            <div class="sk">
+                                <div class="icon">
+                                    <img src="imgs/verify.png" alt>
+                                </div>
+                                <div class="text">
+                                    <p class="main">Javascript</p>
+                                    <div class="level"><p>Intermediate</p></div>
+                                </div>
+                            </div>
+                            <div class="sk">
+                                <div class="icon">
+                                    <img src="imgs/verify.png" alt>
+                                </div>
+                                <div class="text">
+                                    <p class="main">Python</p>
+                                    <div class="level"><p>Intermediate</p></div>
+                                </div>
+                            </div>
+                            <div class="sk">
+                                <div class="icon">
+                                    <img src="imgs/verify.png" alt>
+                                </div>
+                                <div class="text">
+                                    <p class="main">Java</p>
+                                    <div class="level"><p>Basic</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type">
+                        <div class="title">
+                            <h3>Concepts & Soft Skills</h3>
+                        </div>
+                        <div class="info">
+                            <div class="sk">
+                                <div class="icon">
+                                    <img src="imgs/verify.png" alt>
+                                </div>
+                                <div class="text">
+                                    <p class="main">Problem-Solving</p>
+                                </div>
+                            </div>
+                            <div class="sk">
+                                <div class="icon">
+                                    <img src="imgs/verify.png" alt>
+                                </div>
+                                <div class="text">
+                                    <p class="main">Data Structures</p>
+                                </div>
+                            </div>
+                            <div class="sk">
+                                <div class="icon">
+                                    <img src="imgs/verify.png" alt>
+                                </div>
+                                <div class="text">
+                                    <p class="main">Team Work</p>
+                                </div>
+                            </div>
+                            <div class="sk">
+                                <div class="icon">
+                                    <img src="imgs/verify.png" alt>
+                                </div>
+                                <div class="text">
+                                    <p class="main">Documentation</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p>Copyright © 2023 Osama Ayman. All Rights Reserved.</p>   
             </div>
         </div>
-    </div>
-    <!-- End Footer section -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <script src="main.js">
+        <!-- End Skills section -->
+        <!-- Start projects section -->
+        <div class="projects" id="projects">
+            <img src="imgs/gear1.png" alt class="rot rot--reverse">
+            <img src="imgs/gear2.png" alt class="rot rot--reverse2">
+            <div class="container">
+                <div class="special-heading">
+                    <p data-aos="fade-down" data-aos-duration="1000"
+                        data-aos-once="true">Browse My Recent</p>
+                    <h2>Projects</h2>
+                </div>
+                <div class="content">
+                    <div class="bord el1">
+                        <div class="proj">
+                            <div class="projimg">
+                                <img src="imgs/Leon2.png" alt>
+                            </div>
+                            <p>Leon Agency</p>
+                            <div class="links">
+                                <a
+                                    href="https://github.com/OsamaaAyman/Leon-Agency"
+                                    target="_blank"><button>Github</button></a>
+                                <a
+                                    href="https://osamaaayman.github.io/Leon-Agency/"
+                                    target="_blank"><button>Live
+                                        Demo</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bord el2">
+                        <div class="proj">
+                            <div class="projimg">
+                                <img src="imgs/myprofile.png" alt>
+                            </div>
+                            <p>My Portfolio</p>
+                            <div class="links">
+                                <a
+                                    href="https://github.com/OsamaaAyman/My-portfolio"
+                                    target="_blank"><button>Github</button></a>
+                                <a
+                                    href="https://osamaaayman.github.io/My-portfolio/"
+                                    target="_blank"><button>Live
+                                        Demo</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bord el3">
+                        <div class="proj">
+                            <div class="projimg">
+                                <img src="imgs/image.png" alt>
+                            </div>
+                            <p>IEEE BUB</p>
+                            <div class="links">
+                                <a
+                                    href="https://github.com/OsamaaAyman/IEEE-Website"
+                                    target="_blank"><button>Github</button></a>
+                                <a
+                                    href="https://osamaaayman.github.io/IEEE-Website/"
+                                    target="_blank"><button>Live
+                                        Demo</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End projects section -->
+        <!-- Start Contact section -->
+        <div class="contact" id="contact">
+            <div class="container">
+                <div class="special-heading">
+                    <p data-aos="fade-down" data-aos-duration="1000"
+                        data-aos-once="true">Get in Touch</p>
+                    <h2>Contact</h2>
+                </div>
+                <div class="content">
+                    <div class="links">
+                        <div class="link">
+                            <img src="imgs/email.png" alt>
+                            <a href="mailto:osamaaaaymen@gmail.com"
+                                target="_blank">Osamaaaaymen@gmail.com</a>
+                        </div>
+                        <div class="link">
+                            <img src="imgs/linkedin.png" alt>
+                            <a href="https://www.linkedin.com/in/osamaaaayman"
+                                target="_blank">Linkedin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Contact section -->
+        <!-- Start Footer section -->
+        <div class="footer">
+            <div class="container">
+                <div class="content">
+                    <div class="links">
+                        <div class="list">
+                            <ul>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#skills">Experience</a></li>
+                                <li><a href="#projects">Projects</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>Copyright © 2023 Osama Ayman. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <!-- End Footer section -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script> AOS.init(); </script>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script src="main.js">
 
     </script>
-</body>
+    </body>
 </html>
