@@ -14,7 +14,11 @@ body {
 html {
     scroll-behavior: smooth;
 }
-
+body.active{
+    width: 100vw;
+    position: fixed !important;
+    overflow-y: scroll !important;
+}
 .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -234,7 +238,7 @@ nav .hamburger.active span:nth-of-type(3){
         z-index: 3;
     }
     nav .links.active{
-        width: 50%;
+        width: 65%;
     }
     nav ul {
         position: absolute;

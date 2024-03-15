@@ -8,19 +8,17 @@ hamburger.addEventListener("click", function () {
   navb.classList.toggle("active");
   overlay.classList.toggle("active");
 
-  if(navb.classList.contains('active')){
-    document.body.style.position = 'fixed'
-  }
+  document.body.classList.toggle("active");
 
   const removeNav = function () {
     overlay.classList.remove("active");
     navb.classList.remove("active");
     hamburger.classList.remove("active");
-    document.body.style.position = 'static'
+    document.body.classList.remove("active");
   };
   overlay.onclick = function () {
     removeNav();
   };
-  
+
   navli.forEach(li => li.addEventListener('click', removeNav));
 });
