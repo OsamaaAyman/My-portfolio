@@ -249,16 +249,13 @@ nav .hamburger.active span:nth-of-type(3){
         align-content: center;
         height: 75%;
         opacity: 0;
-        transition: .6s;
+        transform: translateX(-150px);
+        transition: opacity 1.2s,transform .7s ease-in-out;
     }
     nav .links.active ul{
         opacity: 1;
+        transform: translateX(0px);
     }
-    
-    nav li {
-        /* text-align: center; */
-    }
-
     nav li a {
         width: 100%;
         font-size: 18px;
