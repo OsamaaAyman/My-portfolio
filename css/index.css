@@ -171,7 +171,7 @@ nav .hamburger {
     display: none;
     flex-wrap: wrap;
     justify-content: flex-end;
-    transition: 1s;
+    transition: .7s;
 }
 
 nav .hamburger span {
@@ -181,11 +181,15 @@ nav .hamburger span {
     margin-bottom: 5px;
 }
 
+nav .hamburger.active{
+    transform: translateY(-7px);
+    transition: .7s;
+}
 nav .hamburger span{
-    transition: 1s;
+    transition: .7s;
 }
 nav .hamburger.active span{
-    transition: 1s;
+    transition: .7s;
 }
 nav .hamburger.active span:nth-of-type(1){
     transform: rotate(140deg) translate(10px,-15px);
@@ -197,9 +201,17 @@ nav .hamburger.active span:nth-of-type(3){
     transform: rotate(-140deg) translate(-3px,0px);
     transition: 1s;
 }
-nav .hamburger.active{
-    transform: translateY(-7px);
-    transition: 1s;
+.overlay{
+    width: 100%;
+    background-color: black;
+    height: 100vh;
+    opacity: .4;
+    top: 80px;
+    position: absolute;
+    display: none;
+}
+.overlay.active{
+    display: block;
 }
 @media (max-width: 991px) {
     nav ul a {
@@ -212,9 +224,8 @@ nav .hamburger.active{
     }
     nav .links{
         background-color: black;
-        width: 50vw;
         height: calc(100vh - 70px);
-        position: fixed;
+        position: absolute;
         left: 0;
         top: 80px;
         width: 0;
@@ -223,7 +234,7 @@ nav .hamburger.active{
         z-index: 3;
     }
     nav .links.active{
-        width: 70vw;
+        width: 50%;
     }
     nav ul {
         position: absolute;
