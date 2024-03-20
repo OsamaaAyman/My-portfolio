@@ -385,6 +385,7 @@ nav .hamburger.active span:nth-of-type(3) {
         width: 250px;
         height: 250px;
         margin-bottom: 20px;
+        box-shadow: rgba(0, 0, 0, 0.3) -5px 3px 25px 6px;
     }
 }
 
@@ -396,10 +397,9 @@ nav .hamburger.active span:nth-of-type(3) {
     .intro .me .job {
         font-size: 22px;
     }
-
     .intro .profile img {
-        width: 220px;
-        height: 220px;
+        width: 235px;
+        height: 235px;
     }
 }
 
@@ -861,16 +861,16 @@ nav .hamburger.active span:nth-of-type(3) {
     font-size: 14px;
     padding: 15px;
     border-radius: 40px;
+    border: none;
     font-weight: bold;
     background-color: white;
     color: black;
-    border: 2px solid black;
     transition-duration: .3s;
     display: flex;
     align-items: center;
     justify-content: center;
     max-height: 50px;
-    width: 80%;
+    width: 90%;
 }
 
 
@@ -888,8 +888,8 @@ nav .hamburger.active span:nth-of-type(3) {
 }
 
 @media (max-width : 480px) {
-    .el3 {
-        grid-column: span 1;
+    .projects .content .bord:nth-of-type(3){
+        flex-grow: 1;
     }
 }
 
