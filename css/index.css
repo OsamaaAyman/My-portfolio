@@ -378,7 +378,7 @@ nav .hamburger.active span:nth-of-type(3) {
 @media (max-width: 991px) {
     .intro .content {
         flex-direction: column;
-        margin-top: 10px;
+        margin-top: -20px;
     }
 
     .intro .profile img {
@@ -386,6 +386,9 @@ nav .hamburger.active span:nth-of-type(3) {
         height: 250px;
         margin-bottom: 20px;
         box-shadow: rgba(0, 0, 0, 0.3) -5px 3px 25px 6px;
+    }
+    .intro .social{
+        margin-top: 15px;
     }
 }
 
