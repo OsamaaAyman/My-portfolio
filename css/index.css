@@ -51,9 +51,10 @@ body.active {
 
 /* End Golobal declarations */
 /* Start Components */
-i{
+i {
     font-size: 23px;
 }
+
 .special-heading {
     text-align: center;
 }
@@ -385,9 +386,10 @@ nav .hamburger.active span:nth-of-type(3) {
         width: 250px;
         height: 250px;
         margin-bottom: 20px;
-        box-shadow: rgba(0, 0, 0, 0.3) -5px 3px 25px 6px;
+        box-shadow: rgba(0, 0, 0, 0.3) -5px 3px 27px 3px;
     }
-    .intro .social{
+
+    .intro .social {
         margin-top: 15px;
     }
 }
@@ -400,6 +402,7 @@ nav .hamburger.active span:nth-of-type(3) {
     .intro .me .job {
         font-size: 22px;
     }
+
     .intro .profile img {
         width: 235px;
         height: 235px;
@@ -411,6 +414,7 @@ nav .hamburger.active span:nth-of-type(3) {
     justify-content: center;
     column-gap: 15px;
 }
+
 .intro .info button {
     font-size: 14px;
     padding: 15px;
@@ -432,6 +436,7 @@ nav .hamburger.active span:nth-of-type(3) {
     position: relative;
     transition-duration: .3s;
 }
+
 .intro .info .bt2::before,
 .intro .info .bt2::after {
     content: "";
@@ -445,20 +450,24 @@ nav .hamburger.active span:nth-of-type(3) {
     background-color: black;
     opacity: .8;
 }
+
 .intro .info .bt2::before {
     background-color: rgb(5, 46, 69);
-    animation: pulse 2.5s ease-out  infinite;
+    animation: pulse 2.5s ease-out infinite;
 }
+
 .intro .info .bt2::after {
     background-color: rgb(27, 8, 8);
-    animation: pulse 2.5s 1s ease-out  infinite;
+    animation: pulse 2.5s 1s ease-out infinite;
 }
-@keyframes pulse{
-    100%{
+
+@keyframes pulse {
+    100% {
         opacity: 0;
-        transform: scale(1.2,1.5);
+        transform: scale(1.2, 1.5);
     }
 }
+
 .intro .info .bt1:hover {
     background-color: black;
     color: white;
@@ -484,19 +493,22 @@ nav .hamburger.active span:nth-of-type(3) {
     transition: 0.3s;
 }
 
-.intro i{
+.intro i {
     font-size: 27px;
     color: black;
     transition: .3s;
 }
+
 .intro .social img:hover {
     opacity: .6;
     transform: translateY(-5px) scale(1.1);
 }
-.intro i:hover{
+
+.intro i:hover {
     color: rgb(101, 5, 101);
     transform: translateY(-5px) scale(1.1);
 }
+
 /* end intro section */
 /* Start About Me section */
 .about {
@@ -702,11 +714,13 @@ nav .hamburger.active span:nth-of-type(3) {
 .skills .sk .icon {
     height: 100%;
 }
-.skills .sk i{
+
+.skills .sk i {
     font-size: 30px;
     transition: .3s;
 }
-.skills .sk:hover i{
+
+.skills .sk:hover i {
     color: green;
     opacity: .8;
 }
@@ -767,13 +781,15 @@ nav .hamburger.active span:nth-of-type(3) {
     justify-content: center;
     align-items: center;
 }
-.projects .content >*{
+
+.projects .content>* {
     flex-basis: 45%;
     flex-grow: 1;
     flex-shrink: 1;
 
 }
-.projects .content .bord:nth-of-type(3){
+
+.projects .content .bord:nth-of-type(3) {
     flex-grow: .3;
 }
 
@@ -789,11 +805,12 @@ nav .hamburger.active span:nth-of-type(3) {
     transform-style: preserve-3d;
     box-shadow: rgba(0, 0, 0, .3) 0px 0 25px 4px;
 }
+
 .projects .bord::before {
     content: '';
     position: absolute;
     bottom: 0px;
-    right:0;
+    right: 0;
     width: 60%;
     height: 50px;
     background: rgba(0, 0, 0, 0.3);
@@ -801,11 +818,12 @@ nav .hamburger.active span:nth-of-type(3) {
     transform: skewY(5deg) translateZ(-1px);
     filter: blur(7px);
 }
+
 .projects .bord::after {
     content: '';
     position: absolute;
     bottom: 0px;
-    left:0;
+    left: 0;
     width: 50%;
     height: 50px;
     background: rgba(0, 0, 0, 0.3);
@@ -850,16 +868,19 @@ nav .hamburger.active span:nth-of-type(3) {
     margin-top: auto;
     width: 100%;
 }
-.projects .links>*{
+
+.projects .links>* {
     flex-basis: 30%;
     flex-grow: 1;
     flex-shrink: 1;
 }
+
 .projects .links a {
     text-decoration: none;
     display: flex;
     justify-content: center;
 }
+
 .projects .links button {
     font-size: 14px;
     padding: 15px;
@@ -891,7 +912,7 @@ nav .hamburger.active span:nth-of-type(3) {
 }
 
 @media (max-width : 480px) {
-    .projects .content .bord:nth-of-type(3){
+    .projects .content .bord:nth-of-type(3) {
         flex-grow: 1;
     }
 }
