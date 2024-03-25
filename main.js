@@ -23,9 +23,22 @@ hamburger.addEventListener("click", function () {
   navli.forEach(li => li.addEventListener('click', removeNav));
 });
 
+let sk=document.querySelectorAll('.sk');
+let i=0;
+const green = () => {
+  sk.forEach((item) => {
+    item.classList.remove("active");
+  })
+  sk[i].classList.add("active");
+  i=i+1;
+  i%=sk.length;
+}
+let timer = setInterval(green, 700);
+
 var typed = new Typed(".job",{
   strings: ["Front-End Developer","Competitive Programmer","AI Model Tranier"],
   typeSpeed:60,
   backSpeed:60,
   loop:true,
 })
+

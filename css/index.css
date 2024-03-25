@@ -635,7 +635,6 @@ nav .hamburger.active span:nth-of-type(3) {
     display: flex;
     flex-direction: column;
     height: 100%;
-    opacity: .7;
     transition: .3s;
     min-height: 500px;
 }
@@ -682,6 +681,8 @@ nav .hamburger.active span:nth-of-type(3) {
     margin: 0 30px;
     max-height: 40px;
     width: 100%;
+    opacity: .5;
+    transition-duration: .5s;
 }
 
 .skills .sk .text {
@@ -704,21 +705,18 @@ nav .hamburger.active span:nth-of-type(3) {
 .skills .sk .icon {
     height: 100%;
 }
-/* .skills .sk i{
+.skills .sk i{
     font-size: 30px;
     transition: .3s;
     animation: verf 1s calc(var(--i) * 1s)  ease-in-out infinite ;
-    animation-timeline: view();
-} */
-.skills .sk:hover i{
+}
+
+.skills .sk.active{
+    opacity: 1;
+}
+.skills .sk.active i{
     color: green;
     opacity: .8;
-}
-@keyframes verf{
-    100%{
-        opacity: 1;
-        color: green;
-    }
 }
 @media (max-width : 991px) {
     .skills .content {
