@@ -42,3 +42,8 @@ var typed = new Typed(".job",{
   loop:true,
 })
 
+let dark =document.querySelector('.logo')
+dark.addEventListener("click",() =>{
+  document.body.classList.toggle('darkmode')
+
+})
