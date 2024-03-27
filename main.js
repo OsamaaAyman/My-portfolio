@@ -47,7 +47,7 @@ const green = () => {
   i = i + 1;
   i %= sk.length;
 }
-const skill = document.querySelector('.skills')
+const skill = document.querySelector('#exp')
 const options2 = {
   root: null,
   rootMargin: '0px',
@@ -65,11 +65,11 @@ const observer2 = new IntersectionObserver((entries) => {
 observer2.observe(skill)
 
 // start darkmode
-const exp = document.querySelector('.skills')
+const exp = document.querySelector('#exp')
 const options = {
   root: null,
-  rootMargin: '0px',
-  threshold: .3
+  threshold: 0,
+  rootMargin: '-100px'
 };
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -80,11 +80,11 @@ const observer = new IntersectionObserver((entries) => {
 }, options)
 observer.observe(exp)
 
-const about = document.querySelector('.about')
+const about = document.querySelector('#ab')
 const options1 = {
   root: null,
   rootMargin: '0px',
-  threshold: .1
+  threshold: .7
 };
 const observer1 = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
