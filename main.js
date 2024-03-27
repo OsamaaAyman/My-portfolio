@@ -69,7 +69,7 @@ const exp = document.querySelector('.skills')
 const options = {
   root: null,
   rootMargin: '0px',
-  threshold: .7
+  threshold: .3
 };
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
