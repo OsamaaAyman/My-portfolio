@@ -47,33 +47,36 @@ const green = () => {
   i = i + 1;
   i %= sk.length;
 }
-const skill = document.querySelector('#exp')
+const skill = document.querySelector('.type')
 const options2 = {
   root: null,
   rootMargin: '0px',
   threshold: .6
 };
+let f=0;
 const observer2 = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.intersectionRatio > options.threshold) {
-      var timer = setInterval(green, 900);
-      observer2.unobserve(entry)
+      i=0;
+      if(!f){
+        var timer = setInterval(green, 700);
+        f=1
+      }
     }
-
   });
 }, options2)
 observer2.observe(skill)
 
 // start darkmode
-const exp = document.querySelector('#exp')
+const exp = document.querySelector('.type')
 const options = {
   root: null,
-  threshold: 0,
-  rootMargin: '-100px'
+  threshold: .6,
+  rootMargin: '0px'
 };
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
+    if (entry.intersectionRatio > options.threshold) {
       document.body.classList.add('darkmode');
     }
   });
@@ -90,7 +93,7 @@ const observer1 = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       document.body.classList.remove('darkmode');
-    }
+  }
   });
 }, options1)
 observer1.observe(about)

@@ -797,6 +797,7 @@ body.darkmode .about .col img {
 
 .skills .sk.active {
     opacity: 1;
+    transform: scale(1.1);
 }
 
 .skills .sk.active i {
