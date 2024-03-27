@@ -23,27 +23,76 @@ hamburger.addEventListener("click", function () {
   navli.forEach(li => li.addEventListener('click', removeNav));
 });
 
-let sk=document.querySelectorAll('.sk');
-let i=0;
+
+var typed = new Typed(".job", {
+  strings: ["Front-End Developer", "Competitive Programmer", "AI Model Tranier"],
+  typeSpeed: 60,
+  backSpeed: 60,
+  loop: true,
+})
+
+let dark = document.querySelector('.logo')
+dark.addEventListener("click", () => {
+  document.body.classList.toggle('darkmode')
+
+})
+
+let sk = document.querySelectorAll('.sk');
+let i = 0;
 const green = () => {
   sk.forEach((item) => {
     item.classList.remove("active");
   })
   sk[i].classList.add("active");
-  i=i+1;
-  i%=sk.length;
+  i = i + 1;
+  i %= sk.length;
 }
-let timer = setInterval(green, 900);
+const skill = document.querySelector('.skills')
+const options2 = {
+  root: null,
+  rootMargin: '0px',
+  threshold: .6
+};
+const observer2 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > options.threshold) {
+      var timer = setInterval(green, 900);
+      observer2.unobserve(entry)
+    }
 
-var typed = new Typed(".job",{
-  strings: ["Front-End Developer","Competitive Programmer","AI Model Tranier"],
-  typeSpeed:60,
-  backSpeed:60,
-  loop:true,
-})
+  });
+}, options2)
+observer2.observe(skill)
 
-let dark =document.querySelector('.logo')
-dark.addEventListener("click",() =>{
-  document.body.classList.toggle('darkmode')
+// start darkmode
+const exp = document.querySelector('.skills')
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: .7
+};
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      document.body.classList.add('darkmode');
+    }
+  });
+}, options)
+observer.observe(exp)
 
-})
+const about = document.querySelector('.about')
+const options1 = {
+  root: null,
+  rootMargin: '0px',
+  threshold: .1
+};
+const observer1 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      document.body.classList.remove('darkmode');
+    }
+  });
+}, options1)
+observer1.observe(about)
+
+// end darkmode

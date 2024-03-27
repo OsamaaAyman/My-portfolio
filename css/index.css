@@ -32,7 +32,7 @@ body {
     background: var(--background);
     color: var(--foreground);
     font-family: "Poppins", sans-serif;
-    transition-duration: .5s;
+    transition-duration: .4s;
 }
 
 html {
@@ -86,6 +86,7 @@ i {
 .special-heading p {
     color: var(--foreground);
     opacity: .5;
+    margin-bottom: 0;
     top: 0;
 }
 
@@ -928,7 +929,9 @@ body.darkmode .bord::after {
     z-index: 2;
 
 }
-
+.projects.active {
+    background-color: black;
+}
 .projects .content .projimg img {
     max-width: 100%;
     max-height: 100%;
@@ -947,7 +950,7 @@ body.darkmode .projects .projimg img {
 
 .projects .proj p {
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .projects .links {
