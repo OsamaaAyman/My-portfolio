@@ -33,7 +33,7 @@ const green = () => {
   i=i+1;
   i%=sk.length;
 }
-let timer = setInterval(green, 700);
+let timer = setInterval(green, 900);
 
 var typed = new Typed(".job",{
   strings: ["Front-End Developer","Competitive Programmer","AI Model Tranier"],
