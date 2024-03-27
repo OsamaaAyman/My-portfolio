@@ -31,8 +31,11 @@
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
     transition-duration: .4s;
+    font-family: "Chakra Petch", sans-serif;
+    -webkit-font-smoothing: antialiased;
+
 }
 
 html {
@@ -184,7 +187,7 @@ nav li a {
     display: block;
     color: var(--foreground);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 400;
 }
 
@@ -265,6 +268,10 @@ nav .hamburger.active span:nth-of-type(3) {
     display: block;
 }
 
+nav .links p {
+    display: none;
+}
+
 @media (max-width: 991px) {
     nav ul a {
         font-size: 20px;
@@ -290,44 +297,73 @@ nav .hamburger.active span:nth-of-type(3) {
     }
 
     nav .links.active {
-        width: 65%;
+        width: 75%;
         overflow: hidden;
+    }
+
+    nav .links p {
+        display: block;
+        color: var(--background);
+        padding: 0 20px;
+        margin-bottom: 20px;
+        opacity: 0;
+        transition: .5s;
+    }
+    nav .links.active p{
+        opacity: 1;
     }
 
     nav ul {
         position: absolute;
         flex-direction: column;
-        padding: 0 60px;
+        padding: 0;
         text-align: left;
-        justify-content: space-around;
+        justify-content: center;
         align-content: center;
         height: 75%;
         opacity: 0;
-        transform: translateX(-150px);
-        transition: opacity 1.2s, transform .7s ease-in-out;
+        transition: opacity 1.6s;
+        width: 100%;
     }
 
     nav .links.active ul {
         opacity: 1;
-        transform: translateX(0px);
+    }
+    
+    nav li {
+        position: relative;
+        transform: translatey(100px);
+        transition: transform .7s ease-in-out;
+    }
+    nav .links.active li {
+        transform: translatey(0px);
+    }
+
+    nav li::before {
+        content: " ";
+        width: 100%;
+        position: absolute;
+        height: 2px;
+        color: red;
     }
 
     nav li a {
         width: 100%;
-        font-size: 18px;
-        font-weight: 400;
+        font-size: 50px;
+        font-weight: 300;
         transition-duration: .4s;
         margin: 0;
-        padding: 10px 40px 10px 15px;
+        padding: 10px 0px 20px 15px;
         color: var(--background);
         border-radius: 20px;
+
     }
 
-    nav ul li:nth-of-type(1) a {
+    /* nav ul li:nth-of-type(1) a {
         opacity: .9;
         background-color: var(--background);
         color: var(--foreground);
-    }
+    } */
 
     nav ul li:hover a {
         opacity: .9;
@@ -336,7 +372,11 @@ nav .hamburger.active span:nth-of-type(3) {
     }
 
     nav li a::after {
-        display: none;
+        width: 90%;
+        background-color: var(--background);
+        opacity: .2;
+        bottom: 5px;
+        left: 10px;
     }
 
     nav .hamburger {
@@ -385,29 +425,30 @@ body.darkmode .intro .profile img {
     color: var(--foreground);
     opacity: .8;
     font-weight: 600;
+
 }
 
 .intro .me .hello {
     margin-top: 0;
     margin-bottom: 5px;
+    opacity: .6;
 }
 
 .intro .me .myname {
-    font-size: 50px;
+    font-size: 65px;
     min-width: 400px;
     margin: 0px;
 }
 
 .intro .me h2 {
-    /* font-size: 35px; */
-    font-weight: 700;
     margin: 5px;
     color: #777;
+    font-weight: 700;
 }
 
 .intro .me h2 span {
     color: var(--foreground);
-    opacity: .8;
+    opacity: .6;
 
 }
 
@@ -435,7 +476,7 @@ body.darkmode .intro .profile img {
 
 @media (max-width: 767px) {
     .intro .me .myname {
-        font-size: 40px;
+        font-size: 50px;
     }
 
     .intro .me .job {
@@ -466,7 +507,7 @@ body.darkmode .intro .profile img {
     color: var(--foreground);
     border: 2px solid var(--foreground);
     transition-duration: .3s;
-    
+
 }
 
 .intro .info .bt2 {
@@ -572,7 +613,7 @@ body.darkmode .intro .social img {
 }
 
 .about .profile {
-    overflow: hidden;
+    /* overflow: hidden; */
     text-align: center;
     border-radius: 20px;
     flex-grow: .3;
@@ -582,12 +623,12 @@ body.darkmode .intro .social img {
     max-width: 100%;
     max-height: 100%;
     border-radius: 20px;
-    transition: .5s;
+    transition: .7s;
     object-fit: cover;
 }
 
 .about .profile img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .about .col img {
@@ -869,7 +910,7 @@ body.darkmode .skills .sk.active i {
     border: 2px solid var(--foreground);
     border-radius: 15px;
     background-color: var(--background);
-    padding: 5px;
+    padding: 10px;
     margin: 0;
     height: 100%;
     position: relative;
@@ -877,10 +918,6 @@ body.darkmode .skills .sk.active i {
     align-self: normal;
     box-shadow: rgba(0, 0, 0, .3) 0px 0 25px 4px;
     min-width: 300px;
-}
-
-body.darkmode .projects .bord {
-    box-shadow: rgba(255, 255, 255, 0.367) 0px 0 20px 0px;
 }
 
 .projects .bord::before {
@@ -895,9 +932,10 @@ body.darkmode .projects .bord {
     transform: skewY(5deg) translateZ(-1px);
     filter: blur(7px);
 }
+
 body.darkmode .projects .bord::before {
     background: rgba(255, 255, 255, 0.367);
-    filter: blur(10px);
+    filter: blur(7px);
 }
 
 .projects .bord::after {
@@ -912,17 +950,18 @@ body.darkmode .projects .bord::before {
     transform: skewY(-5deg) translateZ(-1px);
     filter: blur(7px);
 }
+
 body.darkmode .bord::after {
     background: rgba(255, 255, 255, 0.367);
-    filter: blur(10px);
+    filter: blur(7px);
 }
 
 .projects .proj {
     margin: 0;
     text-align: center;
     padding: 20px 10px 40px;
-    border-radius: 15px;
-    background-color: var(--clr-primary);
+    border-radius: 10px;
+    background-color: var(--foreground);
     color: var(--background);
     height: 100%;
     display: flex;
@@ -930,9 +969,11 @@ body.darkmode .bord::after {
     z-index: 2;
 
 }
+
 .projects.active {
     background-color: black;
 }
+
 .projects .content .projimg img {
     max-width: 100%;
     max-height: 100%;
@@ -950,8 +991,8 @@ body.darkmode .projects .projimg img {
 }
 
 .projects .proj p {
-    font-size: 30px;
-    font-weight: 800;
+    font-size: 40px;
+    font-weight: 700;
 }
 
 .projects .links {
