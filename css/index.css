@@ -124,7 +124,7 @@ i {
 
 body.darkmode .rot {
     filter: invert(1);
-    opacity: .5;
+    opacity: .8;
 }
 
 .rot--normal {
