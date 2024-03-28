@@ -105,7 +105,7 @@ const observer1 = new IntersectionObserver((entries) => {
 observer1.observe(about)
 observer1.observe(ab)
 
-const intro = document.querySelector('.profile')
+const intro = document.querySelector('.stop')
 const options3 = {
   root: null,
   rootMargin: '0px',
@@ -113,9 +113,9 @@ const options3 = {
 };
 const observer3 = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
+    if (entry.isIntersecting ) {
       document.body.classList.remove('darkmode');
-      // document.querySelector('.header').classList.remove("active");
+      document.querySelector('.header').classList.remove("active");
       removeNav();
     }
   });
