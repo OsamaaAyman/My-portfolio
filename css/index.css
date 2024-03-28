@@ -298,8 +298,8 @@ nav .hamburger:hover {
 nav .hamburger span {
     background-color: var(--foreground);
     width: 100%;
-    height: 1px;
-    margin-bottom: 7px;
+    height: 1.5px;
+    margin-bottom: 5px;
 }
 
 nav .hamburger.active {
@@ -637,7 +637,7 @@ body.darkmode .intro .profile img {
 }
 
 .intro .info .bt2::after {
-    background-color: var(--foreground);
+    background-color: #055313;
     opacity: .8;
     animation: pulse 2.5s 1s ease-out infinite;
 }
@@ -690,7 +690,7 @@ body.darkmode .intro .social img {
 }
 
 .intro i:hover {
-    color: rgb(101, 5, 101);
+    color: #055313;
     transform: translateY(-5px) scale(1.1);
 }
 
@@ -708,6 +708,7 @@ body.darkmode .intro .social img {
     padding: 0;
     transition: .5s;
 }
+
 .about.active .container {
     width: 100%;
 }
@@ -715,7 +716,6 @@ body.darkmode .intro .social img {
 .about .content {
     display: flex;
     align-items: center;
-    border-radius: 10px;
     overflow: hidden;
     position: relative;
     width: 40%;
@@ -724,7 +724,6 @@ body.darkmode .intro .social img {
 }
 
 .about.active .content {
-    border-radius: 0;
     width: 100%;
 }
 
@@ -774,15 +773,17 @@ body.darkmode .intro .social img {
     display: none;
     color: white;
     transition: .5s;
+    transform: translateY(150px);
 }
 
 .about.active .section.active {
-    transition: .5s;
+    transition: transform .5s ease-in-out opacity 4s;
     display: block;
 }
 
 .about.active .section.active.op {
     opacity: 1;
+    transform: translateY(0);
 }
 
 .about .section h3 {
@@ -823,41 +824,48 @@ body.darkmode .intro .social img {
     .about .profile {
         flex-basis: 200%;
     }
+
     .about.active .aboutlay {
         width: 110%;
     }
 }
+
 @media (min-width: 1200px) {
-    .about .history{
+    .about .history {
         margin-left: -400px;
     }
+
     .about.active .aboutlay {
         width: 105%;
     }
 }
+
 @media (max-width: 991px) {
     .about .content>* {
         flex-basis: 0%;
     }
-    .about .history{
+
+    .about .history {
         margin: 10px;
         margin-left: -100px;
     }
 }
 
 @media (max-width: 600px) {
-    .about .container{
+    .about .container {
         width: 100%;
     }
-    .about .content{
+
+    .about .content {
         min-height: 500px;
-        
+
     }
+
     .about .profile {
         background-position: -320px;
         background-repeat: no-repeat;
         background-size: cover;
-        
+
         position: absolute;
     }
 
@@ -878,18 +886,20 @@ body.darkmode .intro .social img {
         margin-top: 20px;
         margin-bottom: 20px;
     }
+
     .about .section {
         margin: -2px 0;
     }
+
     .about .section h3 {
         font-size: 30px;
         margin: 10px 0;
     }
-    
+
     .about .section .descript p {
         font-size: 12px;
     }
-    
+
     .about .section h4 {
         font-size: 16px;
     }
@@ -1187,6 +1197,18 @@ body.darkmode .projects .projimg img {
 @media (max-width : 480px) {
     .projects .content .bord {
         flex-grow: .8;
+    }
+
+    .projects .bord.active {
+        transform: scale(1.12) translateY(-10px);
+        box-shadow: rgba(255, 255, 255, 0.34) 0px 0 20px 0px;
+        z-index: 5;
+        opacity: 1;
+
+    }
+
+    .projects .bord.active .proj {
+        transform: rotateY(0deg);
     }
 }
 

@@ -32,35 +32,7 @@ var typed = new Typed(".job", {
 })
 
 
-let sk = document.querySelectorAll('.sk');
-let i = 0;
-const green = () => {
-  sk.forEach((item) => {
-    item.classList.remove("active");
-  })
-  sk[i].classList.add("active");
-  i = i + 1;
-  i %= sk.length;
-}
-const skill = document.querySelector('.type')
-const options2 = {
-  root: null,
-  rootMargin: '0px',
-  threshold: .6
-};
-let f = 0;
-const observer2 = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.intersectionRatio > options.threshold) {
-      i = 0;
-      if (!f) {
-        var timer = setInterval(green, 700);
-        f = 1
-      }
-    }
-  });
-}, options2)
-observer2.observe(skill)
+
 
 // start darkmode
 let tog = 0;
@@ -70,6 +42,8 @@ dark.addEventListener("click", () => {
   tog = !tog;
 })
 const exp = document.querySelector('.type')
+const contact = document.querySelector('.contact')
+const proj = document.querySelectorAll('.bord')
 const options = {
   root: null,
   threshold: .6,
@@ -85,6 +59,9 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, options)
 observer.observe(exp)
+observer.observe(contact)
+proj.forEach((pro) => observer.observe(pro))
+
 
 const ab = document.querySelector('#ab')
 const about = document.querySelector('.about')
@@ -141,3 +118,58 @@ const observer5 = new IntersectionObserver((entries) => {
   });
 }, options5)
 observer5.observe(about)
+
+let bord = document.querySelectorAll('.bord');
+let j = 0;
+let f2=0;
+const flipp = () => {
+  bord.forEach((item) => {
+    item.classList.remove("active");
+  })
+  bord[j].classList.add("active");
+  j = j + 1;
+  j %= bord.length;
+}
+const projects=document.querySelector(".proj");
+const flip = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > options.threshold) {
+      j = 0;
+      if (!f2) {
+        var timer = setInterval(flipp, 1700);
+        f2 = 1
+      }
+    }
+  });
+}, options)
+flip.observe(projects)
+
+let sk = document.querySelectorAll('.sk');
+let i = 0;
+const green = () => {
+  sk.forEach((item) => {
+    item.classList.remove("active");
+  })
+  sk[i].classList.add("active");
+  i = i + 1;
+  i %= sk.length;
+}
+const skill = document.querySelector('.type')
+const options2 = {
+  root: null,
+  rootMargin: '0px',
+  threshold: .6
+};
+let f = 0;
+const observer2 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > options.threshold) {
+      i = 0;
+      if (!f) {
+        var timer = setInterval(green, 700);
+        f = 1
+      }
+    }
+  });
+}, options2)
+observer2.observe(skill)
