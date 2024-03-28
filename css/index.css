@@ -704,19 +704,19 @@ body.darkmode .intro .social img {
     overflow: hidden;
 }
 
-.about.active {
+.about .container {
     padding: 0;
+    transition: .5s;
 }
-
 .about.active .container {
     width: 100%;
-    padding: 0;
 }
 
 .about .content {
     display: flex;
     align-items: center;
     border-radius: 10px;
+    overflow: hidden;
     position: relative;
     width: 40%;
     transition: .7s ease-in-out;
