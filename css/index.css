@@ -744,7 +744,7 @@ body.darkmode .about .col img {
     .about .profile {
         flex-grow: 1;
     }
-    .about .profile img {
+    .about .profile {
         max-width: 500px;
     }
 
