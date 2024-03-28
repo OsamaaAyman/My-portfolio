@@ -165,10 +165,12 @@ body.darkmode .rot {
 
 .header.active {
     padding-top: 20px;
+    padding-bottom: 20px;
     position: sticky;
     top: 0;
     background-image: -webkit-linear-gradient(90deg, transparent 10%, rgba(0, 0, 0, 0.322) 90%);
     z-index: 10;
+    backdrop-filter: blur(1.5px);
 }
 
 .header.active.red {
