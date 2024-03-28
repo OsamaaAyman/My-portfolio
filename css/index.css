@@ -818,26 +818,45 @@ body.darkmode .intro .social img {
     max-width: 90%;
 }
 
-@media (max-width: 1200px) {
-    .about .content {
-        justify-content: center;
-        row-gap: 20px;
+@media (min-width: 992px) {
+    .about .profile {
+        flex-basis: 200%;
+    }
+    .about.active .aboutlay {
+        width: 110%;
     }
 }
-
+@media (min-width: 1200px) {
+    .about .history{
+        margin-left: -400px;
+    }
+    .about.active .aboutlay {
+        width: 105%;
+    }
+}
 @media (max-width: 991px) {
     .about .content>* {
-        flex-basis: 20%;
+        flex-basis: 0%;
     }
-
+    .about .history{
+        margin: 10px;
+        margin-left: -100px;
+    }
 }
 
 @media (max-width: 600px) {
+    .about .container{
+        width: 100%;
+    }
+    .about .content{
+        min-height: 500px;
+        
+    }
     .about .profile {
-        height: 100%;
-        background-position: -170px;
+        background-position: -320px;
         background-repeat: no-repeat;
         background-size: cover;
+        
         position: absolute;
     }
 
@@ -853,13 +872,25 @@ body.darkmode .intro .social img {
     }
 
     .about .history {
-        /* flex-basis: 80%; */
+        flex-basis: 80%;
         margin-left: 30%;
-
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
-
     .about .section {
-        margin: 15px;
+        margin: -2px 0;
+    }
+    .about .section h3 {
+        font-size: 30px;
+        margin: 10px 0;
+    }
+    
+    .about .section .descript p {
+        font-size: 12px;
+    }
+    
+    .about .section h4 {
+        font-size: 16px;
     }
 }
 
