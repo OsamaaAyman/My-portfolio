@@ -96,8 +96,8 @@ const options1 = {
 const observer1 = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting && !tog) {
-      document.body.classList.remove('darkmode');
       document.querySelector('.header').classList.add("active");
+      document.body.classList.remove('darkmode');
       document.querySelector('.header').classList.remove("red");
     }
   });
@@ -123,3 +123,21 @@ const observer3 = new IntersectionObserver((entries) => {
 observer3.observe(intro)
 
 // end darkmode
+//animation
+
+const options5 = {
+  root: null,
+  rootMargin: '0px',
+  threshold: .7
+};
+const observer5 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      about.classList.add("active");
+      setTimeout(function(){document.querySelectorAll('.section').forEach(section => section.classList.add('active'))},500)
+      setTimeout(function(){document.querySelectorAll('.section').forEach(section => section.classList.add('op'))},600)
+
+    }
+  });
+}, options5)
+observer5.observe(about)
