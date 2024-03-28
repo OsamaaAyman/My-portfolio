@@ -697,8 +697,11 @@ body.darkmode .intro .social img {
 /* end intro section */
 /* Start About Me section */
 .about {
-    padding: 0px 20px 40px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
     transition: .7s ease-in-out;
+    overflow: hidden;
 }
 
 .about.active {
@@ -714,7 +717,6 @@ body.darkmode .intro .social img {
     display: flex;
     align-items: center;
     border-radius: 10px;
-    overflow: hidden;
     position: relative;
     width: 40%;
     transition: .7s ease-in-out;
@@ -1073,7 +1075,7 @@ body.darkmode .skills .sk.active i {
     min-width: 300px;
     opacity: .7;
     transition: .5s;
-    transform: skewX(-5deg) skewY(-1deg);
+    transform: skewX(-3deg);
 }
 
 .projects .content .bord:nth-of-type(3) {
