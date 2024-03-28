@@ -143,17 +143,20 @@ body.darkmode .rot {
     top: 295px;
     width: 90px;
 }
-.returntop{
+
+.returntop {
     position: fixed;
     right: 20px;
     transform: rotate(-90deg);
     bottom: 20px;
     z-index: 6;
 }
-.returntop i{
+
+.returntop i {
     color: var(--foreground);
 
 }
+
 #darkmode {
     position: fixed;
     bottom: 30px;
@@ -181,7 +184,8 @@ body.darkmode .rot {
     padding-bottom: 20px;
     background-image: -webkit-linear-gradient(90deg, transparent 10%, rgba(0, 0, 0, 0.322) 90%);
     z-index: 10;
-    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(1.5px);
+    backdrop-filter: blur(1.5px);
 }
 
 .header.active.red {
@@ -208,7 +212,8 @@ body.darkmode .rot {
     font-weight: 600;
     letter-spacing: 0;
 }
-nav{
+
+nav {
     z-index: 10;
 }
 
@@ -306,7 +311,7 @@ nav .hamburger.active span:nth-of-type(3) {
     position: fixed;
     display: none;
     backdrop-filter: blur(1.5px);
-    z-index:5;
+    z-index: 5;
 }
 
 .overlay.active {
@@ -348,9 +353,9 @@ nav .links p {
     }
 
     nav .links.active {
-        transform: scaleY(1) ;
+        transform: scaleY(1);
         overflow: hidden;
-        
+
     }
 
     nav .links p {
