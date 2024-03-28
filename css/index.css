@@ -46,6 +46,7 @@ body.active {
     /* position: fixed !important; */
     /* overflow-y: scroll !important; */
 }
+
 .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -142,32 +143,38 @@ body.darkmode .rot {
     top: 295px;
     width: 90px;
 }
-#darkmode{
+
+#darkmode {
     position: fixed;
     bottom: 30px;
     left: 30px;
     opacity: .7;
     z-index: 20;
 }
-#darkmode i{
+
+#darkmode i {
     font-size: 30px;
 }
+
 /* End Components */
 /* Header section */
 .header {
     padding: 30px;
     transition: .5s;
 }
-.header.active{
+
+.header.active {
     padding-top: 20px;
     position: sticky;
-    top :0;
-    background-image: -webkit-linear-gradient(90deg,transparent,rgba(0, 0, 0, 0.322));
+    top: 0;
+    background-image: -webkit-linear-gradient(90deg, transparent 10%, rgba(0, 0, 0, 0.322) 90%);
     z-index: 10;
 }
-.header.active.red{
-    background-image: -webkit-linear-gradient(90deg,transparent,rgba(121, 16, 16, 0.256));
+
+.header.active.red {
+    background-image: -webkit-linear-gradient(90deg, transparent 10%, rgba(17, 93, 17, 0.308) 80%);
 }
+
 .header .container {
     display: flex;
     justify-content: space-between;
@@ -235,9 +242,11 @@ nav .hamburger {
     justify-content: flex-end;
     transition: .7s;
 }
-nav .hamburger:hover{
+
+nav .hamburger:hover {
     cursor: pointer;
 }
+
 nav .hamburger span {
     background-color: var(--foreground);
     width: 100%;
@@ -273,7 +282,7 @@ nav .hamburger.active span:nth-of-type(3) {
 
 .overlay {
     width: 100%;
-    background-image: -webkit-linear-gradient(90deg,var(--foreground),var(--background));
+    background-image: -webkit-linear-gradient(90deg, var(--foreground), var(--background));
     height: 100vh;
     opacity: .4;
     top: 80px;
@@ -289,9 +298,11 @@ nav .hamburger.active span:nth-of-type(3) {
 nav .links p {
     display: none;
 }
-#darkmode{
+
+#darkmode {
     display: none;
 }
+
 @media (max-width: 991px) {
     nav ul a {
         font-size: 20px;
@@ -305,7 +316,7 @@ nav .links p {
 
     nav .links {
         background-color: var(--foreground);
-        width: 75%;
+        width: 85%;
         height: calc(100vh - 70px);
         transform: scaleY(0);
         transform-origin: 0 100%;
@@ -366,14 +377,14 @@ nav .links p {
         border-radius: 20px;
         opacity: 0;
         transform: translateY(200px);
-        transition: opacity .5s .3s ease-in ,transform .3s .2s linear ,padding-left .2s ease-in-out;
+        transition: opacity .5s .3s ease-in, transform .3s .2s linear, padding-left .2s ease-in-out;
     }
-    
+
     nav .links.active a {
         opacity: 1;
         transform: translateY(0px);
     }
-    
+
 
     nav ul li:hover a {
         padding-left: 40px;
@@ -401,23 +412,28 @@ nav .links p {
     nav .hamburger:hover span:nth-child(2) {
         width: 100%;
     }
+
     #darkmode {
         left: 20px;
         bottom: 15%;
     }
-    #darkmode i{
+
+    #darkmode i {
         color: var(--background);
         font-size: 35px;
     }
 }
+
 @media (max-width: 480px) {
-    nav ul a{
+    nav ul a {
         font-size: 45px;
     }
+
     #darkmode {
         bottom: 25%;
     }
-    #darkmode i{
+
+    #darkmode i {
         color: var(--background);
         font-size: 35px;
     }
@@ -744,6 +760,7 @@ body.darkmode .about .col img {
     .about .profile {
         flex-grow: 1;
     }
+
     .about .profile {
         max-width: 350px;
     }
@@ -801,7 +818,6 @@ body.darkmode .about .col img {
 }
 
 .skills .type>* {
-    flex-basis: 20% 80%;
     flex-shrink: 1;
 }
 
@@ -810,7 +826,8 @@ body.darkmode .about .col img {
 }
 
 .skills .title {
-    min-height: 130px;
+    height: 100%;
+    flex-basis: 20%;
 }
 
 .skills .type .title h3 {
@@ -824,13 +841,9 @@ body.darkmode .about .col img {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    overflow: hidden;
     justify-content: space-around;
     flex-grow: 1;
-}
-
-.skills .type:hover .title h3 {
-    /* color: #0F0F0F; */
+    flex-basis: 80%;
 }
 
 .skills .sk {

@@ -99,7 +99,6 @@ const observer1 = new IntersectionObserver((entries) => {
       document.body.classList.remove('darkmode');
       document.querySelector('.header').classList.add("active");
       document.querySelector('.header').classList.remove("red");
-      removeNav();
     }
   });
 }, options1)
@@ -117,7 +116,6 @@ const observer3 = new IntersectionObserver((entries) => {
     if (entry.isIntersecting ) {
       document.body.classList.remove('darkmode');
       document.querySelector('.header').classList.remove("active");
-      document.querySelector('.header').classList.remove("red");
       removeNav();
     }
   });
