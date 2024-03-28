@@ -38,7 +38,7 @@ body {
     transition-duration: .4s;
     font-family: "Chakra Petch", sans-serif;
     -webkit-font-smoothing: antialiased;
-
+    overflow-x: hidden;
 }
 
 
@@ -753,7 +753,6 @@ body.darkmode .intro .social img {
     width: 700px;
     height: 500px;
     background-image: url(../imgs/blackandwhite.jpg);
-    filter: grayscale(1);
     background-size: 400px;
     background-position: -50px;
     background-position-y: -27px;
