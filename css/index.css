@@ -172,13 +172,14 @@ body.darkmode .rot {
     padding: 30px;
     transition: .5s;
     position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .header.active {
     padding-top: 20px;
     padding-bottom: 20px;
     background-image: -webkit-linear-gradient(90deg, transparent 10%, rgba(0, 0, 0, 0.322) 90%);
-    top: 0;
     z-index: 10;
     backdrop-filter: blur(2px);
 }
@@ -207,13 +208,17 @@ body.darkmode .rot {
     font-weight: 600;
     letter-spacing: 0;
 }
-
+nav{
+    z-index: 10;
+}
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
     column-gap: 25px;
+    z-index: 10;
+
 }
 
 nav li a {
@@ -294,14 +299,14 @@ nav .hamburger.active span:nth-of-type(3) {
 
 .overlay {
     width: 100%;
-    background-image: -webkit-linear-gradient(90deg, transparent 10%, rgba(17, 93, 17, 0.308) 80%);
+    background-image: -webkit-linear-gradient(310deg, transparent 10%, rgba(0, 0, 0, 0.364) 80%);
     height: 100vh;
     opacity: .4;
     top: 70px;
     position: fixed;
     display: none;
     backdrop-filter: blur(1.5px);
-    z-index: 5;
+    z-index:5;
 }
 
 .overlay.active {
@@ -343,8 +348,9 @@ nav .links p {
     }
 
     nav .links.active {
-        transform: scaleY(1);
+        transform: scaleY(1) ;
         overflow: hidden;
+        
     }
 
     nav .links p {
@@ -370,6 +376,7 @@ nav .links p {
         height: 75%;
         opacity: 1;
         width: 90%;
+        z-index: 40;
     }
 
     nav .links.active ul i {
@@ -556,6 +563,7 @@ body.darkmode .intro .profile img {
     display: flex;
     justify-content: center;
     column-gap: 15px;
+
 }
 
 .intro .info button {
