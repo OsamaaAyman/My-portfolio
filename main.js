@@ -113,7 +113,7 @@ const options3 = {
 };
 const observer3 = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting ) {
+    if (entry.isIntersecting) {
       document.body.classList.remove('darkmode');
       document.querySelector('.header').classList.remove("active");
       removeNav();
