@@ -31,7 +31,6 @@
 body {
     background: var(--background);
     color: var(--foreground);
-    /* font-family: "Poppins", sans-serif; */
     transition-duration: .4s;
     font-family: "Chakra Petch", sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -43,11 +42,10 @@ html {
 }
 
 body.active {
-    width: 100vw;
-    position: fixed !important;
-    overflow-y: scroll !important;
+    /* width: 100vw; */
+    /* position: fixed !important; */
+    /* overflow-y: scroll !important; */
 }
-
 .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -127,7 +125,6 @@ i {
 
 body.darkmode .rot {
     filter: invert(1);
-    opacity: .8;
 }
 
 .rot--normal {
@@ -145,14 +142,32 @@ body.darkmode .rot {
     top: 295px;
     width: 90px;
 }
-
+#darkmode{
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    opacity: .7;
+    z-index: 20;
+}
+#darkmode i{
+    font-size: 30px;
+}
 /* End Components */
 /* Header section */
 .header {
     padding: 30px;
-    height: 100px;
+    transition: .5s;
 }
-
+.header.active{
+    padding-top: 20px;
+    position: sticky;
+    top :0;
+    background-image: -webkit-linear-gradient(90deg,transparent,rgba(0, 0, 0, 0.322));
+    z-index: 10;
+}
+.header.active.red{
+    background-image: -webkit-linear-gradient(90deg,transparent,rgba(121, 16, 16, 0.256));
+}
 .header .container {
     display: flex;
     justify-content: space-between;
@@ -220,7 +235,9 @@ nav .hamburger {
     justify-content: flex-end;
     transition: .7s;
 }
-
+nav .hamburger:hover{
+    cursor: pointer;
+}
 nav .hamburger span {
     background-color: var(--foreground);
     width: 100%;
@@ -256,12 +273,13 @@ nav .hamburger.active span:nth-of-type(3) {
 
 .overlay {
     width: 100%;
-    background-color: black;
+    background-image: -webkit-linear-gradient(90deg,var(--foreground),var(--background));
     height: 100vh;
     opacity: .4;
     top: 80px;
-    position: absolute;
+    position: fixed;
     display: none;
+
 }
 
 .overlay.active {
@@ -271,7 +289,9 @@ nav .hamburger.active span:nth-of-type(3) {
 nav .links p {
     display: none;
 }
-
+#darkmode{
+    display: none;
+}
 @media (max-width: 991px) {
     nav ul a {
         font-size: 20px;
@@ -326,10 +346,14 @@ nav .links p {
         align-content: center;
         height: 75%;
         opacity: 1;
-        width: 100%;
+        width: 90%;
     }
 
-    nav .links.active ul {
+    nav .links.active ul i {
+        display: block;
+        color: var(--background);
+        margin: 20px 10px;
+        font-size: 45px;
     }
 
     nav li a {
@@ -342,29 +366,21 @@ nav .links p {
         border-radius: 20px;
         opacity: 0;
         transform: translateY(200px);
-        /* transition: opacity 1s .2s transform .5s 3s; */
-        transition: .5s .2s;
+        transition: opacity .5s .3s ease-in ,transform .3s .2s linear ,padding-left .2s ease-in-out;
     }
     
     nav .links.active a {
         opacity: 1;
         transform: translateY(0px);
     }
-
-    /* nav ul li:nth-of-type(1) a {
-        opacity: .9;
-        background-color: var(--background);
-        color: var(--foreground);
-    } */
+    
 
     nav ul li:hover a {
-        opacity: .9;
-        background-color: var(--background);
-        color: var(--foreground);
+        padding-left: 40px;
     }
 
     nav li a::after {
-        width: 90%;
+        width: 100%;
         background-color: var(--background);
         height: 1.5px;
         opacity: .3;
@@ -384,6 +400,26 @@ nav .links p {
 
     nav .hamburger:hover span:nth-child(2) {
         width: 100%;
+    }
+    #darkmode {
+        left: 20px;
+        bottom: 15%;
+    }
+    #darkmode i{
+        color: var(--background);
+        font-size: 35px;
+    }
+}
+@media (max-width: 480px) {
+    nav ul a{
+        font-size: 45px;
+    }
+    #darkmode {
+        bottom: 25%;
+    }
+    #darkmode i{
+        color: var(--background);
+        font-size: 35px;
     }
 }
 
@@ -702,15 +738,14 @@ body.darkmode .about .col img {
 
 @media (max-width: 991px) {
     .about .content>* {
-        .about .content {
-            /* flex-direction: column; */
-        }
-
         flex-basis: 20%;
     }
 
     .about .profile {
-        flex-grow: .7;
+        flex-grow: 1;
+    }
+    .about .profile img {
+        max-width: 500px;
     }
 
 }

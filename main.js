@@ -1,8 +1,14 @@
 let hamburger = document.querySelector(".hamburger");
+let overlay = document.querySelector(".overlay");
+let navb = document.querySelector(".links");
+let navli = document.querySelectorAll("a");
+const removeNav = function () {
+  overlay.classList.remove("active");
+  navb.classList.remove("active");
+  hamburger.classList.remove("active");
+  document.body.classList.remove("active");
+};
 hamburger.addEventListener("click", function () {
-  let overlay = document.querySelector(".overlay");
-  let navb = document.querySelector(".links");
-  let navli = document.querySelectorAll("a");
 
   hamburger.classList.toggle("active");
   navb.classList.toggle("active");
@@ -10,12 +16,6 @@ hamburger.addEventListener("click", function () {
 
   document.body.classList.toggle("active");
 
-  const removeNav = function () {
-    overlay.classList.remove("active");
-    navb.classList.remove("active");
-    hamburger.classList.remove("active");
-    document.body.classList.remove("active");
-  };
   overlay.onclick = function () {
     removeNav();
   };
@@ -31,11 +31,6 @@ var typed = new Typed(".job", {
   loop: true,
 })
 
-let dark = document.querySelector('.logo')
-dark.addEventListener("click", () => {
-  document.body.classList.toggle('darkmode')
-
-})
 
 let sk = document.querySelectorAll('.sk');
 let i = 0;
@@ -53,14 +48,14 @@ const options2 = {
   rootMargin: '0px',
   threshold: .6
 };
-let f=0;
+let f = 0;
 const observer2 = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.intersectionRatio > options.threshold) {
-      i=0;
-      if(!f){
+      i = 0;
+      if (!f) {
         var timer = setInterval(green, 700);
-        f=1
+        f = 1
       }
     }
   });
@@ -68,6 +63,12 @@ const observer2 = new IntersectionObserver((entries) => {
 observer2.observe(skill)
 
 // start darkmode
+let tog = 0;
+let dark = document.querySelector('#darkmode')
+dark.addEventListener("click", () => {
+  document.body.classList.toggle('darkmode')
+  tog = !tog;
+})
 const exp = document.querySelector('.type')
 const options = {
   root: null,
@@ -76,14 +77,17 @@ const options = {
 };
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.intersectionRatio > options.threshold) {
+    if (entry.intersectionRatio > options.threshold && !tog) {
       document.body.classList.add('darkmode');
+      document.querySelector('.header').classList.add("active");
+      document.querySelector('.header').classList.add("red");
     }
   });
 }, options)
 observer.observe(exp)
 
-const about = document.querySelector('#ab')
+const ab = document.querySelector('#ab')
+const about = document.querySelector('.about')
 const options1 = {
   root: null,
   rootMargin: '0px',
@@ -91,11 +95,33 @@ const options1 = {
 };
 const observer1 = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
+    if (entry.isIntersecting && !tog) {
       document.body.classList.remove('darkmode');
-  }
+      document.querySelector('.header').classList.add("active");
+      document.querySelector('.header').classList.remove("red");
+      removeNav();
+    }
   });
 }, options1)
 observer1.observe(about)
+observer1.observe(ab)
+
+const intro = document.querySelector('.social')
+const options3 = {
+  root: null,
+  rootMargin: '0px',
+  threshold: .7
+};
+const observer3 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting ) {
+      document.body.classList.remove('darkmode');
+      document.querySelector('.header').classList.remove("active");
+      document.querySelector('.header').classList.remove("red");
+      removeNav();
+    }
+  });
+}, options3)
+observer3.observe(intro)
 
 // end darkmode
