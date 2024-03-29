@@ -139,6 +139,7 @@ const flip = new IntersectionObserver((entries) => {
         var timer = setInterval(flipp, 1700);
         f2 = 1
       }
+      flip.unobserve(entry.target);
     }
   });
 }, options)
