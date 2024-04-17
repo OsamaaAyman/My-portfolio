@@ -55,6 +55,7 @@
                 </nav>
             </div>
         </div>
+        <json src="imgs/Animation - 1711682825537.json"></json>
 
         <div id="darkmode">
             <i class="fa-solid fa-sun"></i>
@@ -62,53 +63,72 @@
         <div class="overlay"></div>
         <!-- End Header -->
         <!-- Start Intro Section -->
-        <div class="intro" id="intro">
-            <div class="container">
-                <div class="content">
-                    <div class="profile" data-aos="fade-up" data-aos-delay="0"
-                        data-aos-duration="1000" data-aos-once="true">
-                        <img src="imgs/md.jpg" alt="Osama">
+        <div class="parallax">
+
+            <div class="content">
+                <div class="profile" data-aos="fade-up"
+                    data-aos-delay="0"
+                    data-aos-duration="1000" data-aos-once="true">
+                    <img src="imgs/md.jpg" alt="Osama">
+                </div>
+                <div class="me">
+                    <div class="text" data-aos="fade-up"
+                        data-aos-delay="150" data-aos-duration="1000"
+                        data-aos-once="true">
+                        <p class="hello">Hello, I'm</p>
+                        <h1 class="myname">Osama Ayman</h1>
+                        <h2><span class="job"></span></h2>
                     </div>
-                    <div class="me">
-                        <div class="text" data-aos="fade-up"
-                            data-aos-delay="150" data-aos-duration="1000"
-                            data-aos-once="true">
-                            <p class="hello">Hello, I'm</p>
-                            <h1 class="myname">Osama Ayman</h1>
-                            <h2><span class="job"></span></h2>
+                    <div class="info">
+                        <a href="Osama_Ayman_Resume.pdf" target="_blank"
+                            download="Osama_Ayman_Resume"><button
+                                class="bt1">Download CV</button></a>
+                        <div class="pulse">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <a href="#contact"><button
+                                    class="bt2">Contact
+                                    info</button></a>
                         </div>
-                        <div class="info">
-                            <a href="Osama_Ayman_Resume.pdf" target="_blank"
-                                download="Osama_Ayman_Resume"><button
-                                    class="bt1">Download CV</button></a>
-                            <div class="pulse">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <a href="#contact"><button class="bt2">Contact
-                                        info</button></a>
-                            </div>
-                        </div>
-                        <div class="social">
-                            <a href="https://www.linkedin.com/in/osamaaaayman"
-                                target="_blank"><i
-                                    class="fa-brands fa-linkedin-in"></i></a>
-                            <a href="https://github.com/OsamaaAyman"
-                                target="_blank"><i
-                                    class="fa-brands fa-github"></i></a>
-                            <a
-                                href="https://codeforces.com/profile/Osamaaaayman"
-                                target="_blank"><img src="imgs/codeforces.png"
-                                    alt></a>
-                        </div>
+                    </div>
+                    <div class="social">
+                        <a
+                            href="https://www.linkedin.com/in/osamaaaayman"
+                            target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/OsamaaAyman"
+                            target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a
+                            href="https://codeforces.com/profile/Osamaaaayman"
+                            target="_blank"><img
+                                src="imgs/codeforces.png"
+                                alt></a>
                     </div>
                 </div>
             </div>
+            <img src="imgs/dust.webp" alt class="dust">
+            <img
+                class="parallax__foreground-back"
+                src="imgs/foreground-back.webp"
+                alt />
+            <img
+                class="parallax__foreground-front"
+                src="imgs/foreground-front.webp"
+                alt />
+
         </div>
+
         <!-- End Intro Section -->
-        <div class="returntop"><a href="#stop"><img src="imgs/fast-forward.png" alt></a></div>
+        <div class="returntop"><a href="#stop"><img src="imgs/fast-forward.png"
+                    alt></a></div>
         <!-- Start About me Section -->
         <div class="about" id="about">
+            <!-- <div class="test"> -->
+                
+                <div id="particles-js"></div>
+            <!-- </div> -->
             <div class="container">
                 <div class="special-heading">
                     <p data-aos="fade-down" data-aos-duration="1000"
@@ -116,16 +136,27 @@
                     <h2>About Me</h2>
                 </div>
                 <div class="content">
-                    <div class="aboutlay"></div>
-                    <div class="profile"></div>
+                    
+                    <!-- <div class="aboutlay"></div> -->
+                    <!-- <div class="profile"></div> -->
                     <div class="history">
                         <div class="section">
-                            <h3>Education:</h3>
-                            <p>University: Benha University</p>
-                            <p>Major: CS</p>
-                            <p>GPA: 3.76</p>
-                            <div class="descript" id="ab">
-                                <p></p>
+                            <div class="p1">
+                                <h3>Education:</h3>
+                                <p>University: Benha University</p>
+                                <p>Major: CS</p>
+                                <p>GPA: 3.76</p>
+                                <div class="descript" id="ab">
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="p1">
+                                <h3>Activities:</h3>
+                                <p>Problem-Solving committe Head at IEEE BUB (2024)</p>
+                                <p>Problem-Solving committe Member at IEEE BUB (2023)</p>
+                                <div class="descript" id="ab">
+                                    <p></p>
+                                </div>
                             </div>
                         </div>
                         <div class="section">
@@ -282,7 +313,7 @@
                         data-aos-once="true">Browse My Recent</p>
                     <h2>Projects</h2>
                 </div>
-                <div class="content">
+                <!-- <div class="content">
                     <div class="bord">
                         <div class="proj">
                             <div class="projimg">
@@ -334,10 +365,91 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <!-- End projects section -->
+        <!-- slider -->
+        <div class="slider">
+            <!-- list Items -->
+            <div class="list">
+                <div class="item active">
+                    <img src="imgs/image copy.png">
+                    <div class="content">
+                        <p>HTML, CSS & Javascript Design</p>
+                        <h2>IEEE Website</h2>
+                        <p>
+                            This is my First Team project where I was working
+                            With IEEE Web Committe to make a new website for us
+                            that's inspired by the Original one.
+                        </p>
+                        <div class="links">
+                            <a
+                                href="https://osamaaayman.github.io/IEEE-Website/"
+                                target="_blank"><button>Live Demo</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="imgs/image copy 2.png">
+                    <div class="content">
+                        <p>HTML, CSS & Javascript Design</p>
+                        <h2>My Portfolio</h2>
+                        <p>
+                            This is the most project I worked on where I wanted
+                            to show my skills in Web-Development and make use of
+                            it to make a portfolio for my self and work.
+                        </p>
+                        <div class="links">
+                            <a
+                                href="https://osamaaayman.github.io/My-portfolio/"
+                                target="_blank"><button>Live
+                                    Demo</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="imgs/Leon2.png">
+                    <div class="content">
+                        <p>HTML & CSS Design</p>
+                        <h2>Leon Agency</h2>
+                        <p>
+                            This is my first ever project and it's aim was to
+                            learn how to write a clean code.
+                        </p>
+                        <div class="links">
+                            <a
+                                href="https://osamaaayman.github.io/Leon-Agency/"
+                                target="_blank"><button>Live
+                                    Demo</button></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- button arrows -->
+            <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <!-- thumbnail -->
+            <div class="thumbnail">
+                <div class="item active">
+                    <img src="imgs/ieee2.png">
+
+                </div>
+                <div class="item">
+                    <img src="imgs/image copy 2.png">
+
+                </div>
+                <div class="item">
+                    <img src="imgs/Leon2.png">
+
+                </div>
+
+            </div>
+        </div>
+
         <!-- Start Contact section -->
         <div class="contact" id="contact">
             <div class="container">
@@ -385,8 +497,10 @@
         <script> AOS.init(); </script>
         <script
             src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-        <script src="main.js">
-
-    </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="main.js"></script>
+        <script src="particles.js"></script>
+        <script src="app.js"></script>
     </body>
 </html>

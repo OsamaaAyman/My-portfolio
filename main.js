@@ -1,3 +1,9 @@
+window.onload = () => {
+  document.location.hash = "";
+}
+window.dispatchEvent(new Event('resize'));
+// $(window).trigger('resize');
+
 let hamburger = document.querySelector(".hamburger");
 let overlay = document.querySelector(".overlay");
 let navb = document.querySelector(".links");
@@ -43,7 +49,7 @@ dark.addEventListener("click", () => {
 })
 const exp = document.querySelector('.type')
 const contact = document.querySelector('.contact')
-const proj = document.querySelectorAll('.bord')
+const proj = document.querySelectorAll('.slider')
 const options = {
   root: null,
   threshold: .6,
@@ -110,9 +116,8 @@ const options5 = {
 const observer5 = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      about.classList.add("active");
-      setTimeout(function(){document.querySelectorAll('.section').forEach(section => section.classList.add('active'))},500)
-      setTimeout(function(){document.querySelectorAll('.section').forEach(section => section.classList.add('op'))},600)
+      // about.classList.add("active");
+
 
     }
   });
@@ -121,7 +126,7 @@ observer5.observe(about)
 
 let bord = document.querySelectorAll('.bord');
 let j = 0;
-let f2=0;
+let f2 = 0;
 const flipp = () => {
   bord.forEach((item) => {
     item.classList.remove("active");
@@ -130,7 +135,7 @@ const flipp = () => {
   j = j + 1;
   j %= bord.length;
 }
-const projects=document.querySelector(".proj");
+const projects = document.querySelector(".proj");
 const flip = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.intersectionRatio > options.threshold) {
@@ -139,11 +144,10 @@ const flip = new IntersectionObserver((entries) => {
         var timer = setInterval(flipp, 1700);
         f2 = 1
       }
-      flip.unobserve(entry.target);
     }
   });
 }, options)
-flip.observe(projects)
+// flip.observe(projects)
 
 let sk = document.querySelectorAll('.sk');
 let i = 0;
@@ -174,3 +178,99 @@ const observer2 = new IntersectionObserver((entries) => {
   });
 }, options2)
 observer2.observe(skill)
+
+
+
+
+
+window.addEventListener('scroll', reveal);
+function reveal() {
+  // console.log(1);
+  var reveals = document.querySelector(".about .special-heading");
+  var windowheight = window.innerHeight;
+  var revealtop = reveals.getBoundingClientRect().top;
+  var revealpoint = 150;
+  if (revealtop < windowheight - revealpoint) {
+    about.classList.add('active');
+    setTimeout(function () { document.querySelectorAll('.section').forEach(section => section.classList.add('active')) }, 200)
+    setTimeout(function () { document.querySelectorAll('.section').forEach(section => section.classList.add('op')) }, 300)
+    window.dispatchEvent(new Event('resize'));
+    $(window).trigger('resize');
+  }
+  else {
+    about.classList.remove('active');
+  }
+}
+
+
+
+
+
+
+let items = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let thumbnails = document.querySelectorAll('.thumbnail .item');
+
+// config param
+let countItem = items.length;
+let itemActive = 0;
+// event next click
+next.onclick = function(){
+    itemActive = itemActive + 1;
+    itemActive %= countItem;
+    showSlider();
+}
+//event prev click
+prev.onclick = function(){
+    itemActive = itemActive - 1;
+    if(itemActive < 0){
+        itemActive = countItem - 1;
+    }
+    showSlider();
+}
+// auto run slider
+let refreshInterval = setInterval(() => {
+    next.click();
+}, 5000)
+function showSlider(){
+    // remove item active old
+    let itemActiveOld = document.querySelector('.slider .list .item.active');
+    let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
+    itemActiveOld.classList.remove('active');
+    thumbnailActiveOld.classList.remove('active');
+
+    // active new item
+    items[itemActive].classList.add('active');
+    thumbnails[itemActive].classList.add('active');
+
+    // clear auto time run slider
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(() => {
+        next.click();
+    }, 5000)
+}
+
+// click thumbnail
+thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+        itemActive = index;
+        showSlider();
+    })
+})
+
+
+gsap.from('nav a', { duration: 1, opacity: 0, delay: .4,
+stagger: .4 });
+// gsap.from('.sk', {
+//   "--myColor":"#fffff",
+//   delay:1
+// });
+// gsap.to('.sk', {
+//   "--myColor":"#0ae448",
+//   opacity:1,
+//   stagger:.7,
+//   scale:1.1,
+//   repeat: -1,
+//   delay:1
+// });
