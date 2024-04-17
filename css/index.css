@@ -813,6 +813,7 @@ body.darkmode .parallax .social img {
     position: absolute;
     left: 0;
     top: -10px;
+    z-index: 10;
 }
 
 .about.active {

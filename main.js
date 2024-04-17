@@ -122,6 +122,7 @@ const observer5 = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       // about.classList.add("active");
+    window.dispatchEvent(new Event('resize'));
 
 
     }
@@ -129,29 +130,29 @@ const observer5 = new IntersectionObserver((entries) => {
 }, options5)
 observer5.observe(about)
 
-let bord = document.querySelectorAll('.bord');
-let j = 0;
-let f2 = 0;
-const flipp = () => {
-  bord.forEach((item) => {
-    item.classList.remove("active");
-  })
-  bord[j].classList.add("active");
-  j = j + 1;
-  j %= bord.length;
-}
-const projects = document.querySelector(".proj");
-const flip = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.intersectionRatio > options.threshold) {
-      j = 0;
-      if (!f2) {
-        var timer = setInterval(flipp, 1700);
-        f2 = 1
-      }
-    }
-  });
-}, options)
+// let bord = document.querySelectorAll('.bord');
+// let j = 0;
+// let f2 = 0;
+// const flipp = () => {
+//   bord.forEach((item) => {
+//     item.classList.remove("active");
+//   })
+//   bord[j].classList.add("active");
+//   j = j + 1;
+//   j %= bord.length;
+// }
+// const projects = document.querySelector(".proj");
+// const flip = new IntersectionObserver((entries) => {
+//   entries.forEach(entry => {
+//     if (entry.intersectionRatio > options.threshold) {
+//       j = 0;
+//       if (!f2) {
+//         var timer = setInterval(flipp, 1700);
+//         f2 = 1
+//       }
+//     }
+//   });
+// }, options)
 // flip.observe(projects)
 
 let sk = document.querySelectorAll('.sk');
@@ -194,17 +195,19 @@ function reveal() {
   var reveals = document.querySelector(".about .special-heading");
   var windowheight = window.innerHeight;
   var revealtop = reveals.getBoundingClientRect().top;
-  var revealpoint = 150;
+  var revealpoint = 150; 
+  var par=1;
   if (revealtop < windowheight - revealpoint) {
     about.classList.add('active');
     setTimeout(function () { document.querySelectorAll('.section').forEach(section => section.classList.add('active')) }, 200)
     setTimeout(function () { document.querySelectorAll('.section').forEach(section => section.classList.add('op')) }, 300)
-    window.dispatchEvent(new Event('resize'));
-    $(window).trigger('resize');
+    if(par){
+      window.dispatchEvent(new Event('resize'));
+      par=0;
+    }
+
   }
-  else {
-    about.classList.remove('active');
-  }
+  
 }
 
 
