@@ -122,7 +122,7 @@ const observer5 = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       // about.classList.add("active");
-    window.dispatchEvent(new Event('resize'));
+      window.dispatchEvent(new Event('resize'));
 
 
     }
@@ -195,19 +195,19 @@ function reveal() {
   var reveals = document.querySelector(".about .special-heading");
   var windowheight = window.innerHeight;
   var revealtop = reveals.getBoundingClientRect().top;
-  var revealpoint = 150; 
-  var par=1;
+  var revealpoint = 150;
+  var par = 1;
   if (revealtop < windowheight - revealpoint) {
     about.classList.add('active');
     setTimeout(function () { document.querySelectorAll('.section').forEach(section => section.classList.add('active')) }, 200)
     setTimeout(function () { document.querySelectorAll('.section').forEach(section => section.classList.add('op')) }, 300)
-    if(par){
+    if (par) {
       window.dispatchEvent(new Event('resize'));
-      par=0;
+      par = 0;
     }
 
   }
-  
+
 }
 
 
@@ -268,5 +268,11 @@ thumbnails.forEach((thumbnail, index) => {
 })
 
 
-// gsap.from('nav a', { duration: 1, opacity: 0, delay: .4,
-// stagger: .4 });
+// gsap
+const windowInnerWidth = window.innerWidth;
+if (windowInnerWidth > 767) {
+  gsap.from('nav a', {
+    duration: 1, opacity: 0, delay: .4,
+    stagger: .4
+  });
+}
