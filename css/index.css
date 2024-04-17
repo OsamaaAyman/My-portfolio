@@ -529,7 +529,7 @@ body.darkmode .about {
     }
 
     .parallax .dust {
-        bottom: 70px;
+        bottom: 40px;
     }
 }
 
@@ -556,6 +556,9 @@ body.darkmode .about {
 }
 
 /* Start intro section */
+.parallax {
+    margin-top: 5px;
+}
 
 .parallax .content {
     display: flex;
@@ -563,9 +566,7 @@ body.darkmode .about {
     align-items: center;
     text-align: center;
     column-gap: 40px;
-    /* position: absolute;
-    top: 10%; */
-    /* left: 20%; */
+    margin-left: -10px;
 }
 
 .parallax .content>* {
@@ -578,6 +579,7 @@ body.darkmode .about {
     flex-basis: 13%;
     align-items: center;
     flex-grow: 0.13;
+    margin-top: 20px;
 }
 
 .parallax .profile img {
@@ -667,7 +669,7 @@ body.darkmode .parallax .profile img {
 
 @media (max-width: 480px) {
     .parallax .me .myname {
-        font-size: 45px;
+        font-size: 42px;
     }
 
     .parallax .profile {
@@ -803,12 +805,14 @@ body.darkmode .parallax .social img {
     transform-origin: top;
     height: 20vh;
 }
+
 #particles-js {
     height: 100%;
     width: 100%;
     background: transparent;
     position: absolute;
 }
+
 .about.active {
     /* transform: scaleY(1); */
     height: 90vh;
@@ -965,8 +969,7 @@ body.darkmode .parallax .social img {
     }
 
     .about .content {
-        min-height: 500px;
-
+        margin-top: -35px;
     }
 
     .about .profile {
@@ -994,7 +997,7 @@ body.darkmode .parallax .social img {
     }
 
     .about .section h3 {
-        font-size: 30px;
+        font-size: 26px;
         margin: 10px 0;
     }
 

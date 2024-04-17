@@ -1,7 +1,12 @@
 window.onload = () => {
   document.location.hash = "";
+  window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
 }
-window.dispatchEvent(new Event('resize'));
+// window.dispatchEvent(new Event('resize'));
 // $(window).trigger('resize');
 
 let hamburger = document.querySelector(".hamburger");
@@ -216,61 +221,49 @@ let thumbnails = document.querySelectorAll('.thumbnail .item');
 let countItem = items.length;
 let itemActive = 0;
 // event next click
-next.onclick = function(){
-    itemActive = itemActive + 1;
-    itemActive %= countItem;
-    showSlider();
+next.onclick = function () {
+  itemActive = itemActive + 1;
+  itemActive %= countItem;
+  showSlider();
 }
 //event prev click
-prev.onclick = function(){
-    itemActive = itemActive - 1;
-    if(itemActive < 0){
-        itemActive = countItem - 1;
-    }
-    showSlider();
+prev.onclick = function () {
+  itemActive = itemActive - 1;
+  if (itemActive < 0) {
+    itemActive = countItem - 1;
+  }
+  showSlider();
 }
 // auto run slider
 let refreshInterval = setInterval(() => {
-    next.click();
+  next.click();
 }, 5000)
-function showSlider(){
-    // remove item active old
-    let itemActiveOld = document.querySelector('.slider .list .item.active');
-    let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
-    itemActiveOld.classList.remove('active');
-    thumbnailActiveOld.classList.remove('active');
+function showSlider() {
+  // remove item active old
+  let itemActiveOld = document.querySelector('.slider .list .item.active');
+  let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
+  itemActiveOld.classList.remove('active');
+  thumbnailActiveOld.classList.remove('active');
 
-    // active new item
-    items[itemActive].classList.add('active');
-    thumbnails[itemActive].classList.add('active');
+  // active new item
+  items[itemActive].classList.add('active');
+  thumbnails[itemActive].classList.add('active');
 
-    // clear auto time run slider
-    clearInterval(refreshInterval);
-    refreshInterval = setInterval(() => {
-        next.click();
-    }, 5000)
+  // clear auto time run slider
+  clearInterval(refreshInterval);
+  refreshInterval = setInterval(() => {
+    next.click();
+  }, 5000)
 }
 
 // click thumbnail
 thumbnails.forEach((thumbnail, index) => {
-    thumbnail.addEventListener('click', () => {
-        itemActive = index;
-        showSlider();
-    })
+  thumbnail.addEventListener('click', () => {
+    itemActive = index;
+    showSlider();
+  })
 })
 
 
-gsap.from('nav a', { duration: 1, opacity: 0, delay: .4,
-stagger: .4 });
-// gsap.from('.sk', {
-//   "--myColor":"#fffff",
-//   delay:1
-// });
-// gsap.to('.sk', {
-//   "--myColor":"#0ae448",
-//   opacity:1,
-//   stagger:.7,
-//   scale:1.1,
-//   repeat: -1,
-//   delay:1
-// });
+// gsap.from('nav a', { duration: 1, opacity: 0, delay: .4,
+// stagger: .4 });
