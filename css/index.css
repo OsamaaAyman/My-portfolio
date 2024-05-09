@@ -665,6 +665,12 @@ body.darkmode .parallax .profile img {
         font-size: 22px;
     }
 
+    .parallax .profile img {
+        width: 220px;
+        height: 220px;
+        box-shadow: rgba(0, 0, 0, 0.3) -5px 14px 27px 3px;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -1364,23 +1370,28 @@ body.darkmode .projects .projimg img {
     margin-left: 5px;
     transition: .6s;
 }
-.contact .link i{
+
+.contact .link i {
     padding-right: 7px;
-    opacity:.7;
+    opacity: .7;
     transition: .5s;
 }
+
 .contact .link a:hover {
     scale: 1.05;
     transform: translatey(-2px);
 }
+
 .contact .link a:hover i {
-    opacity:1;
+    opacity: 1;
 }
+
 @media (max-width : 991px) {
     .contact .links {
         flex-wrap: wrap;
         width: 70%;
     }
+
     .contact .link a {
         font-size: 12px;
     }
