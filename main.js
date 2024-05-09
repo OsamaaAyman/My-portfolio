@@ -166,24 +166,39 @@ const green = () => {
   i %= sk.length;
 }
 const skill = document.querySelector('.type')
-const options2 = {
-  root: null,
-  rootMargin: '0px',
-  threshold: .6
-};
 let f = 0;
-const observer2 = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.intersectionRatio > options.threshold) {
-      i = 0;
-      if (!f) {
-        var timer = setInterval(green, 700);
-        f = 1
-      }
+gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.create({
+  trigger: ".projects",
+  start: "top center",
+  end: "top 100px",
+  onEnter: () => {
+    i = 0;
+    if (!f) {
+      var timer = setInterval(green, 700);
+      f = 1
     }
-  });
-}, options2)
-observer2.observe(skill)
+  }
+  // markers: true
+});
+// const options2 = {
+//   root: null,
+//   rootMargin: '0px',
+//   threshold: .6
+// };
+// let f = 0;
+// const observer2 = new IntersectionObserver((entries) => {
+//   entries.forEach(entry => {
+//     if (entry.intersectionRatio > options.threshold) {
+//       i = 0;
+//       if (!f) {
+//         var timer = setInterval(green, 700);
+//         f = 1
+//       }
+//     }
+//   });
+// }, options2)
+// observer2.observe(skill)
 
 
 
@@ -276,3 +291,9 @@ if (windowInnerWidth > 767) {
     stagger: .4
   });
 }
+gsap.from(".parallax .content div", {
+  opacity: 0,
+  duration: .6,
+  y: 300,
+  stagger: .4
+})
